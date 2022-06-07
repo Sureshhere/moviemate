@@ -21,13 +21,39 @@
         h1.hdg {
             margin-top: 300px;
         }
+        
+        .back-btn {
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            background: rgb(0, 0, 0);
+            height: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            border: 2px solid yellow;
+            border-radius: 15px;
+            cursor: pointer;
+            flex-wrap: wrap;
+        }
+        
+        .back-btn:hover {
+            background: yellow;
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            transition: 0.4s ease;
+        }
     </style>
 
 </head>
 
 <body>
     <h1 class="hdg">THIS PAGE IS UNDER DEVELOPMENT :)</h1>
-    <h3 class="hdg">Visit back soon!!</h3>
+    <h3 class="hdg">Visit back soon!! <br>
+        <a class="btn-link" href="./index.html">
+            <button class="back-btn">Click here to go back</button>
+        </a>
+    </h3>
+
 
 </body>
 
