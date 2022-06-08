@@ -153,80 +153,6 @@ body.active {
 
 
 /**
- * BADGE
- */
-
-.badge {
-    color: var(--white);
-    font-size: var(--fs-12);
-    font-weight: var(--fw-700);
-    border: 2px solid transparent;
-    padding: 2px 10px;
-}
-
-.badge-fill {
-    background: var(--white);
-    color: var(--raisin-black);
-}
-
-.badge-outline {
-    border-color: var(--white);
-}
-
-
-/**
- * MOVIE META
- */
-
-.meta-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px 25px;
-    margin-bottom: 50px;
-}
-
-.badge-wrapper,
-.ganre-wrapper,
-.date-time {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5px 10px;
-}
-
-.ganre-wrapper>a {
-    color: var(--gainsboro);
-    font-size: var(--fs-9);
-    font-weight: var(--fw-500);
-    transition: var(--transition-1);
-}
-
-.ganre-wrapper>a:is(:hover, :focus) {
-    color: var(--citrine);
-}
-
-.date-time {
-    gap: 15px;
-}
-
-.date-time>div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--gainsboro);
-    font-size: var(--fs-9);
-    font-weight: var(--fw-500);
-}
-
-.date-time ion-icon {
-    --ionicon-stroke-width: 50px;
-    color: var(--citrine);
-}
-
-
-/**
  * BUTTONS
  */
 
@@ -256,139 +182,6 @@ body.active {
 .btn-primary:is(:hover, :focus) {
     background: var(--citrine);
     color: var(--xiketic);
-}
-
-
-/**
- * MOVIE CARD
- */
-
-.movies-list {
-    display: grid;
-    gap: 50px;
-}
-
-.movie-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.movie-card .card-banner {
-    position: relative;
-    background: var(--gunmetal-1);
-    aspect-ratio: 2 / 3;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    transition: var(--transition-1);
-}
-
-.movie-card .card-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    transition: var(--transition-1);
-}
-
-.movie-card .card-banner:hover {
-    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.5);
-}
-
-.movie-card .card-banner:hover::after {
-    background: hsla(0, 0%, 100%, 0.05);
-}
-
-.movie-card .card-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.movie-card .title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.movie-card .card-title {
-    color: var(--white);
-    font-weight: 510;
-    font-size: var(--fs-7);
-    transition: var(--transition-1);
-}
-
-.movie-card .card-title:is(:hover, :focus) {
-    color: var(--citrine);
-}
-
-.movie-card .title-wrapper time {
-    color: var(--citrine);
-    font-size: var(--fs-9);
-    font-weight: var(--fw-500);
-}
-
-.movie-card .card-meta {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-}
-
-.movie-card .badge {
-    color: var(--citrine);
-}
-
-.movie-card .duration {
-    margin-left: auto;
-}
-
-.movie-card :is(.duration, .rating) {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--gainsboro);
-    font-size: var(--fs-11);
-    font-weight: var(--fw-500);
-}
-
-.movie-card :is(.duration, .rating) ion-icon {
-    font-size: 13px;
-    --ionicon-stroke-width: 50px;
-    color: var(--citrine);
-}
-
-
-/**
- * CUSTOM SLIDER & SCROLLBAR
- */
-
-.movies-list.has-scrollbar {
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-snap-type: inline mandatory;
-    padding-bottom: 25px;
-}
-
-.has-scrollbar::-webkit-scrollbar {
-    height: 8px;
-}
-
-.has-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-    box-shadow: 0 0 0 2px var(--citrine);
-    border-radius: 10px;
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--gainsboro);
-    border-radius: 10px;
-    box-shadow: inset 0 1px 0 var(--black), inset 0 -1px 0 var(--black);
 }
 
 
@@ -866,74 +659,17 @@ body.active {
    * CUSTOM PROPERTY
    */
      :root {
-        /**
-     * typography
-     */
         --fs-1: 42px;
     }
-    /**
-   * REUSED STYLE
-   */
-    .container {
-        max-width: 540px;
-        margin-inline: auto;
-    }
-    /* MOVIE CARD */
-    .movies-list {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px 30px;
-    }
-    /**
-   * HERO
-   */
-    .hero {
-        min-height: unset;
-    }
-    .hero-content {
-        margin-top: 20px;
-    }
-    .hero-title {
-        font-size: 30px;
-        margin-top: 55px;
-        width: 50%;
-    }
-    .ganre-wrapper {
-        width: 70%;
-    }
-    /**
-   * UPCOMING
-   */
-    .upcoming .movies-list>li {
-        min-width: calc(50% - 15px);
-    }
-    /**
-   * SERVICE
-   */
-    .service-list>li:first-child {
-        padding-bottom: 30px;
-    }
-    .service-card {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    .service-card .card-icon {
-        margin-bottom: 0;
-    }
-    .service-card .card-content {
-        width: calc(100% - 115px);
-    }
-    /**
-   * MOVIE DETAIL
-   */
-    .detail-subtitle {
-        --fs-5: 22px;
-    }
-    .detail-title {
-        --fs-1: 46px;
-    }
-    a.active {
-        color: yellow;
+}
+
+@media (max-width:480px) {
+    .video-player {
+        width: fit-content;
+        height: 250px;
+        background-color: #000000;
+        margin-left: -160px;
+        overflow: hidden;
     }
 }
 
@@ -1322,31 +1058,6 @@ body.active {
 ****************MOVIE PLAYER***************
 */
 
-
-/* div {
-    text-align: center;
-    width: 100%;
-    vertical-align: middle;
-    height: 100%;
-    display: table-cell;
-}
-
-div>iframe {
-    width: 1000px;
-    height: 500px;
-}
-
-div,
-body,
-html {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    display: table;
-} */
-
 #wrapper {
     text-align: center;
     margin: 200px;
@@ -1354,4 +1065,44 @@ body {
 
 #wrapper iframe {
     display: inline-block;
+}
+
+
+/* 
+********LOADING animation***********
+*/
+
+body {
+    overflow: hidden;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171d21;
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(/movies/assets/images/pre-loader.svg);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
 }
