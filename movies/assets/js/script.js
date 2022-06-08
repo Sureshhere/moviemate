@@ -1,5 +1,14 @@
 'use strict';
 
+
+// **********Pre loader**********
+
+$(window).on('load', function() {
+    $('#status').fadeOut();
+    $('#preloader').delay(2).fadeOut('slow');
+    $('body').delay(2).css({ 'overflow': 'visible' });
+})
+
 /**
  * navbar variables
  */
@@ -22,6 +31,7 @@ for (let i = 0; i < navElemArr.length; i++) {
     });
 
 }
+
 
 
 
@@ -94,4 +104,13 @@ window.addEventListener("scroll", function() {
 
     window.scrollY >= 500 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
 
+});
+$(document).bind("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+$(document).keydown(function(e) {
+    if (e.which === 123) {
+        return false;
+    }
 });
