@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+    <script>
+        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+        if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+
+        function mischandler() {
+            return false;
+        }
+
+        function mousehandler(e) {
+            var myevent = (isNS) ? e : event;
+            var eventbutton = (isNS) ? myevent.which : myevent.button;
+            if ((eventbutton == 2) || (eventbutton == 3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +32,7 @@
     <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
 
     <!-- 
     - google font link
@@ -26,6 +43,14 @@
 </head>
 
 <body id="top">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+
 
     <!-- 
     - #HEADER
@@ -40,28 +65,7 @@
                 <img src="./assets/images/cinema.png" alt="Filmlane logo">
             </a>
 
-            <div class="header-actions">
 
-                <button class="search-btn">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-
-                <div class="lang-wrapper">
-                    <label for="language">
-            <ion-icon name="globe-outline"></ion-icon>
-          </label>
-
-                    <select name="language" id="language">
-            <option value="en">ENGLISH</option>
-            <option value="au">HINDI</option>
-            <option value="ar">TELUGU</option>
-            <option value="tu">FRENCH</option>
-          </select>
-                </div>
-
-                <button class="btn btn-primary">Watch now!</button>
-
-            </div>
 
             <button class="menu-open-btn" data-menu-open-btn>
         <ion-icon name="reorder-two"></ion-icon>
@@ -146,14 +150,15 @@
 
     <div id="wrapper">
 
-        <iframe id="wrapper iframe" vertical-align: middle; width="1000" height="1200" src="https://membed.net/streaming.php?id=ODgyMg==&title=Interstellar+HD-720p&typesub=SUB&sub=L2ludGVyc3RlbGxhci1oZC03MjBwL2ludGVyc3RlbGxhci1oZC03MjBwLnZ0dA==&cover=L2ludGVyc3RlbGxhci1lbnYvY292ZXIucG5n"
-            title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe id="wrapper iframe" vertical-align: middle; width="1000" height="600" src="https://membed.net/streaming.php?id=ODgyMg==&title=Interstellar+HD-720p&typesub=SUB&sub=L2ludGVyc3RlbGxhci1oZC03MjBwL2ludGVyc3RlbGxhci1oZC03MjBwLnZ0dA==&cover=L2ludGVyc3RlbGxhci1lbnYvY292ZXIucG5n"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+        <embed class="video-player" width="1000px" height="600px" src="https://membed.net/streaming.php?id=ODgyMg==&title=Interstellar+HD-720p&typesub=SUB&sub=L2ludGVyc3RlbGxhci1oZC03MjBwL2ludGVyc3RlbGxhci1oZC03MjBwLnZ0dA==&cover=L2ludGVyc3RlbGxhci1lbnYvY292ZXIucG5n"
+            type="video/mp4">
+
+
 
     </div>
-
-
-
-
 
     <!-- 
     - custom js link
