@@ -115,9 +115,7 @@ $(document).keydown(function(e) {
     }
 });
 
-// *********ad block*******************
-
-
+// *********ad block*******************.
 
 window.onload = function() {
     var button = document.getElementsByName("sandbox")[0]
