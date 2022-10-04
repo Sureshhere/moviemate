@@ -1135,6 +1135,7 @@ body.active {
 /**
  * responsive for large than 550px screen
  */
+ 
 
 @media (max-width: 550px) {
     /**
@@ -1231,7 +1232,8 @@ body.active {
    * REUSED STYLE
    */
     .container {
-        max-width: 720px;
+        max-width: 780px;
+        margin-left: 70px;
     }
     /**
    * HEADER
@@ -1517,7 +1519,8 @@ body.active {
    * REUSED STYLE
    */
     .container {
-        max-width: 1320px;
+        max-width: 1450px;
+        margin-left: 30px;
     }
     /* MOVIE CARD */
     .movies-list {
