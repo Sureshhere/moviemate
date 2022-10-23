@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_dup.css">
 </head>
 
 <body id="top">
@@ -51,15 +52,18 @@
             <ion-icon name="globe-outline"></ion-icon>
           </label>
 
-                    <select name="language" id="language">
-            <option value="en">ENGLISH</option>
-            <option value="au">HINDI</option>
-            <option value="ar">TELUGU</option>
-            <option value="tu">FRENCH</option>
-          </select>
+          <div class="dropdown">
+            <button class="dropbtn">Language</button>
+            <div class="dropdown-content">
+            <a href="/index.html">English</a>
+            <a href="/index_hindi.html">हिंदी</a>
+            <a href="#">తెలుగు</a>
+            <a href="#">Francais</a>
+            </div>
+          </div>
                 </div>
 
-                <button class="btn btn-primary">Watch now!</button>
+                <button class="btn btn-primary">Login</button>
 
             </div>
 
@@ -257,14 +261,14 @@
                         <li>
                             <div class="movie-card">
 
-                                <a href="#">
+                                <a href="/movies/thor_love&thunder.html">
                                     <figure class="card-banner">
                                         <img src="./assets/images/upcoming-1.png" alt="Thor: Love and Thunder poster">
                                     </figure>
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="#">
+                                    <a href="/movies/thor_love&thunder.html">
                                         <h3 class="card-title">Thor: Love and Thunder</h3>
                                     </a>
 
@@ -293,14 +297,14 @@
                         <li>
                             <div class="movie-card">
 
-                                <a href="#">
+                                <a href="/movies/doctor-strange-multiverse.html">
                                     <figure class="card-banner">
                                         <img src="./assets/images/upcoming-2.png" alt="Doctor Strange in the Multiverse of Madness movie poster">
                                     </figure>
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="#">
+                                    <a href="/movies/doctor-strange-multiverse.html">
                                         <h3 class="card-title">Doctor Strange in the Multiverse of Madness</h3>
                                     </a>
 
@@ -448,7 +452,7 @@
                                         <h3 class="h3 card-title">Enjoy on Your TV.</h3>
 
                                         <p class="card-text">
-                                            Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.
+                                            <!-- Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor. -->
                                         </p>
                                     </div>
 
@@ -490,31 +494,97 @@
 
             <section class="top-rated">
                 <div class="container">
+                    <div class="wrapper">
+                        <!-- filter Items -->
+                        <nav>
+                          <div class="items">
+                            <span class="item active" data-name="all">All</span>
+                            <span class="item" data-name="bollywood">Bollywood</span>
+                            <span class="item" data-name="tollywood">Tollywood</span>
+                            <span class="item" data-name="hollywood">Hollywood</span>
+                            <span class="item" data-name="kdrama">K-Drama</span>
+                            <span class="item" data-name="anime">Anime</span>
+                          </div>
+                        </nav>
+                        <!-- filter Images -->
+                        <div class="gallery">
+                            
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/dangal.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Brahmastra_poster.jpeg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/83-Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Sooryavanshi-Hindi-Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Dybbuk-Hindi-Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Laxmii-Hindi-Poster.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Chhalaang-Hindi-Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Simmba_poster.jpg" alt=""></span></div> 
+                         
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/URI_poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Bajrangi_Bhaijaan_Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Sanju_poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Padmaavat_poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Mission_Mangal.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Bhool_Bhulaiyaa_2_film_poster.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/3_idiots_poster.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Bajirao_Mastani_poster.jpg" alt=""></span></div>
+                         <div class="image" data-name="bollywood"><span><img src="/assets/images/Kesari_poster.jpg" alt=""></span></div>
 
-                    <p style="font-size: 20px;" class="section-subtitle">Online Streaming</p>
+
+
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Sita_Ramam.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/RRR_Poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Major_The_Film.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Cinema_Bandi_poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Jersey_poster.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Arjun_Reddy.jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Pushpa_-_The_Rise_(2021_film).jpg" alt=""></span></div> 
+                         <div class="image" data-name="tollywood"><span><img src="/assets/images/Akhanda_Poster.jpg" alt=""></span></div> 
+
+
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/X_(2022_film).jpeg" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/movie-7.png" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/Dune_(2021_film).jpg" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/texas_chainsaw.jpg" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/Godzilla_vs._Kong.png" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/Conjuring_2.jpg" alt=""></span></div> 
+                         <div class="image" data-name="hollywood"><span><img src="/assets/images/TheNunPoster.jpg" alt=""></span></div> 
+                        <div class="image" data-name="hollywood"><span><img src="/assets/images/Rampage_teaser_film_poster.jpg" alt=""></span></div> 
+
+
+
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/all_of_us_are_dead.jpg" alt=""></span></div> 
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/squid_games.png" alt=""></span></div> 
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/hellbound.jpg" alt=""></span></div> 
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/business_proposal.jpg" alt=""></span></div>
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/vincenzo.jpg" alt=""></span></div>
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/eve.jpg" alt=""></span></div>
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/big_mouth.jpg" alt=""></span></div>
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/why_her.jpg" alt=""></span></div>
+                         <div class="image" data-name="kdrama"><span><img src="/assets/images/sweet_home.jpg" alt=""></span></div>
+
+
+
+                         <div class="image" data-name="anime"><span><img src="/assets/images/tokyo_ghoul.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/one_punch_man.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/overlord.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/a_silent_voice.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/pokemon_secrets_of_junngle.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/howls_moving_castle.jpg" alt=""></span></div> 
+                         <div class="image" data-name="anime"><span><img src="/assets/images/belle.jpg" alt=""></span></div> 
+                        </div>
+                      </div>
+                      <!-- fullscreen img preview box -->
+                      <div class="preview-box">
+                        <div class="details">
+                          <span class="title">Image Category: <p></p></span>
+                          <span class="icon fas fa-times"></span>
+                        </div>
+                        <div class="image-box"><img src="" alt=""></div>
+                      </div>
+                      <div class="shadow"></div>
+                    
+                      <p style="font-size: 20px;" class="section-subtitle">Online Streaming</p>
 
                     <h2 class="h2 section-title">Top Rated Movies</h2>
-
-                    <!-- <ul class="filter-list">
-
-                        <li>
-                            <button class="filter-btn">Movies</button>
-                        </li>
-
-                        <li>
-                            <button class="filter-btn">TV Shows</button>
-                        </li>
-
-                        <li>
-                            <button class="filter-btn">Documentary</button>
-                        </li>
-
-                        <li>
-                            <button class="filter-btn">Sports</button>
-                        </li>
-
-                    </ul> -->
-
                     <ul class="movies-list">
 
                         <li>
@@ -628,14 +698,14 @@
                         <li>
                             <div class="movie-card">
 
-                                <a href="./movie-details.html">
+                                <a href="/movies/spiderman-no-way-home.html">
                                     <figure class="card-banner">
                                         <img src="./assets/images/movie-4.png" alt="Spider-Man: No Way Home poster">
                                     </figure>
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="./movie-details.html">
+                                    <a href="/movies/spiderman-no-way-home.html">
                                         <h3 class="card-title">Spider-Man: No Way Home</h3>
                                     </a>
 
@@ -664,14 +734,14 @@
                         <li>
                             <div class="movie-card">
 
-                                <a href="./movie-details.html">
+                                <a href="/movies/the-batman.html">
                                     <figure class="card-banner">
                                         <img src="./assets/images/movie-5.png" alt="The Batman movie poster">
                                     </figure>
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="./movie-details.html">
+                                    <a href="/movies/the-batman.html">
                                         <h3 class="card-title">The Batman</h3>
                                     </a>
 
@@ -772,14 +842,14 @@
                         <li>
                             <div class="movie-card">
 
-                                <a href="./movie-details.html">
+                                <a href="/movies/avatar-2009.html">
                                     <figure class="card-banner">
                                         <img src="./assets/images/movie-8.png" alt="Avatar movie poster">
                                     </figure>
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="./movie-details.html">
+                                    <a href="/movies/avatar-2009.html">
                                         <h3 class="card-title">Avatar</h3>
                                     </a>
 
@@ -976,7 +1046,7 @@
                 </div>
             </section>
 
-
+            
 
 
 
@@ -1002,12 +1072,14 @@
                     </form>
 
                 </div>
+                
             </section>
 
         </article>
+        
     </main>
 
-
+    
 
 
 
@@ -1146,13 +1218,13 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
-
+    <script src="/app_dup.js"></script>
     <!-- 
     - ionicon link
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  
 </body>
 
 </html>
