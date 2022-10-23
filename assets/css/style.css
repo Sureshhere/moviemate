@@ -233,7 +233,7 @@ body.active {
 .btn {
     color: var(--white);
     font-size: var(--fs-11);
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-500);
     text-transform: uppercase;
     letter-spacing: 2px;
     display: flex;
@@ -512,8 +512,52 @@ body.active {
     opacity: 1;
     pointer-events: all;
 }
-
-
+/* Translate */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: var(--fs-7);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--eerie-black);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--ff-poppins);
+  }
+  
+  .dropdown-content a:hover {
+    font-weight: 600;
+    /* font-size: 20px; */
+    color: var(--citrine);
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    color: var(--citrine);
+  }
 /*-----------------------------------*\
  * #HERO
 \*-----------------------------------*/
@@ -718,6 +762,189 @@ body.active {
 }
 
 
+ /* Filter movies */
+ .wrapper{
+    margin: 100px auto;
+    max-width: 1100px;
+  }
+  .wrapper nav{
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .items{
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+  .items span{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 50px;
+    border: 2px solid hsl(57, 97%, 45%);
+    transition: all 0.3s ease;
+  }
+  .items span.active,
+  .items span:hover{
+    color: rgb(0, 0, 0);
+    background: hsl(57, 97%, 45%);
+  }
+  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .gallery .image{
+    width: calc(100% / 5); /*no of cards in row*/
+    padding: 7px;
+  }
+  .image{
+    height: 300px;
+    margin-bottom: 25px;
+    
+  }
+  .image img{
+    height:300px;
+  }
+  .gallery .image span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  .gallery .image:hover img{
+    transform: scale(1.1);
+  }
+  .gallery .image.hide{
+    display: none;
+  }
+  .gallery .image.show{
+    animation: animate 0.4s ease;
+  }
+
+
+
+  @keyframes animate {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  
+  .preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  }
+  .preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+  }
+  .preview-box .details{
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .details .title p{
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .details .icon{
+    color: #007bff;
+    font-style: 22px;
+    cursor: pointer;
+  }
+  .preview-box .image-box{
+    width: 100%;
+    display: flex;
+  }
+  .image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+  .shadow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.4);
+  }
+  .shadow.show{
+    display: block;
+  }
+  
+  @media (max-width: 1000px) {
+    .gallery .image{
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery .image{
+      width: calc(100% / 2);
+      
+    }
+  }
+  @media (max-width: 700px) {
+    .wrapper nav .items{
+      max-width: 600px;
+    }
+    nav .items span{
+      padding: 7px 15px;
+    }
+  }
+  @media (max-width: 600px) {
+    .wrapper{
+      margin: 30px auto;
+    }
+    .wrapper nav .items{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav .items span{
+      margin: 5px;
+    }
+    /* .gallery .image{
+      width: 100%;
+    } */
+  }
+  
+
+
+
+
+
 /*-----------------------------------*\
  * #TOP RATED
 \*-----------------------------------*/
@@ -727,6 +954,7 @@ body.active {
     background-size: cover;
     background-position: center;
     padding-block: var(--section-padding);
+    padding-top: 1px;
 }
 
 .top-rated .section-title {
@@ -1159,6 +1387,53 @@ body.active {
         grid-template-columns: 1fr 1fr;
         gap: 60px 30px;
     }
+    /* dropdown */
+    .dropbtn {
+        color: white;
+        padding: 10px 25px;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+        width: 100%;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--eerie-black);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {
+        font-weight: 600;
+        /* font-size: 20px; */
+        color: var(--citrine);
+    }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        color: var(--citrine);
+      }
     /**
    * HERO
    */
@@ -1283,6 +1558,8 @@ body.active {
     .lang-wrapper option {
         color: var(--black);
     }
+    /* dropdown */
+    
     /**
    * HERO
    */
@@ -1594,3 +1871,5 @@ body.active {
         transform: rotate(-0.25turn);
     }
 }
+
+
