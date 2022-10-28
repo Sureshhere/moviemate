@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+        if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+
+        function mischandler() {
+            return false;
+        }
+
+        function mousehandler(e) {
+            var myevent = (isNS) ? e : event;
+            var eventbutton = (isNS) ? myevent.which : myevent.button;
+            if ((eventbutton == 2) || (eventbutton == 3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mate - Best movie collections</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style2.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <div class="overlay" data-overlay></div>
+
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/cinema.png" alt="Filmlane logo">
+            </a>
+
+
+
+            <button class="menu-open-btn" data-menu-open-btn>
+                <ion-icon name="reorder-two"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+
+                    <a href="../index.html" class="logo">
+                        <img src="./assets/images/cinema.png" alt="Filmlane logo">
+                    </a>
+
+                    <button class="menu-close-btn" data-menu-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="../index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="" class="navbar-link">Movie</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Tv Show</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Web Series</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Contact us</a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-social-list">
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <br><br><br><br><br>
+
+    <div class="container2">
+        
+        <div class="main-video-container">
+            <div class="video-title">
+                <span>Dune Part 1</span>
+            </div>
+            <video
+                src="https://fvs.io/redirector?token=Sm5QT1czeFdLcDRtNkhMSGoxWjAybFNLMmxMYm9GVFNRTzYrbGhQdXVxc3dnOTBzd2h0UEJKa0V2Zms5bHhOK0hHN1g4U0FuNFo0MGFnQ1NqMXVESGxJejIvMUEyZG85Myt6RWJ6VW1tbE4vNUo3KzVNRkk4Ynlaa3RkRTVBRDdocHh6djd2Q2d4ajM3dGpPeityV2QyQ1MzSmNEengwZ2hFZz06NUQ5QUpLYkV0UVo1dHpicDVGZWtWdz09dsrR"
+                loop controls 
+                poster="https://w0.peakpx.com/wallpaper/527/919/HD-wallpaper-movie-dune-2021-thumbnail.jpg"
+                class="main-video"></video>
+            <h3 class="main-vid-title"></h3>
+        </div>
+
+
+
+    <!-- <iframe name="framez" id="framez" allowfullscreen="true" class="video-player" vertical-align: middle;
+            width="1000" height="600" src="https://cinegrabber.com/v/dk42phxzq715888" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> -->
+
+
+
+    <!--  -->
+
+
+
+
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let videoList = document.querySelectorAll('.video-list-container .list');
+
+        videoList.forEach(vid => {
+            vid.onclick = () => {
+                videoList.forEach(remove => { remove.classList.remove('active') });
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.main-video-container .main-video').src = src;
+                document.querySelector('.main-video-container .main-video').play();
+                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+    </script>
+
+
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
