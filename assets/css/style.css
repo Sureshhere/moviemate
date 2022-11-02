@@ -1219,7 +1219,6 @@ body.active {
 \*-----------------------------------*/
 
 .movie-detail {
-    background: url("../images/movie-detail-bg.png") no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 160px;
