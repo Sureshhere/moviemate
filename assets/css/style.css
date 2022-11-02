@@ -1219,6 +1219,7 @@ body.active {
 \*-----------------------------------*/
 
 .movie-detail {
+    /* background: url("../images/movie-detail-bg.png") no-repeat; */
     background-size: cover;
     background-position: center;
     padding-top: 160px;
@@ -1353,6 +1354,14 @@ body.active {
     font-size: 16px;
 }
 
+.watch-btn{
+    font-size: 15px;
+    color: white;
+}
+.watch-btn:hover{
+    color: black;
+}
+
 
 /*-----------------------------------*\
  * #MEDIA QUERIES
@@ -1484,6 +1493,12 @@ body.active {
     }
     a.active {
         color: yellow;
+    }
+    .video-player{
+        width: 320px; 
+        margin-right: 0;
+        margin-left: 0;    
+        
     }
 }
 
@@ -1625,6 +1640,11 @@ body.active {
     }
     a.active {
         color: yellow;
+    }
+    .video-player{
+        width: 650px;
+        margin-right: 50%;
+        
     }
 }
 
@@ -1773,6 +1793,11 @@ body.active {
         left: 15px;
         bottom: -80px;
     }
+    .video-player{
+        width: 1000px;
+        margin-right: 10%;
+        
+    }
 }
 
 
@@ -1814,6 +1839,10 @@ body.active {
         padding: 10px 35px;
         letter-spacing: 1px;
     }
+
+
+
+    
     /**
    * HERO
    */
@@ -1869,6 +1898,9 @@ body.active {
         font-size: 30px;
         transform: rotate(-0.25turn);
     }
+    .video-player{
+        width: 1000px;
+        margin-left: calc(50%/5);
+    }
 }
-
 
