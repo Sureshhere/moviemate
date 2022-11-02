@@ -2,27 +2,11 @@
 <html lang="en">
 
 <head>
-    <script>
-        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-        if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
-
-        function mischandler() {
-            return false;
-        }
-
-        function mousehandler(e) {
-            var myevent = (isNS) ? e : event;
-            var eventbutton = (isNS) ? myevent.which : myevent.button;
-            if ((eventbutton == 2) || (eventbutton == 3)) return false;
-        }
-        document.oncontextmenu = mischandler;
-        document.onmousedown = mousehandler;
-        document.onmouseup = mousehandler;
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Mate - Best movie collections</title>
+
 
     <!-- 
     - favicon
@@ -33,7 +17,7 @@
     - custom css link
   -->
     <link rel="stylesheet" href="./assets/css/style2.css">
-
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- 
     - google font link
   -->
@@ -148,161 +132,108 @@
         </div>
     </header>
 
-    <br><br><br><br><br>
+    <section class="movie-detail">
+        <div class="container">
 
-    <div class="container2">
-        
-        <div class="main-video-container">
-            <div class="video-title">
-                <span>All of us are dead : Season 1</span>
-            </div>
-            <video
-                src="https://fvs.io/redirector?token=WHphZ1RNQmd5UzBDOTFqdnd4ZkEyd29iZ3RXcldLVlFzZ1NEYzlLNGp1R2V5SUt0U0tnNEdyU29wczVEU0NSTndIL3liUCs5WE50SzZ6Qk0zd3dYclByN3gySWV0eHJPbTNZN3ZGaFUzZkxHS0NmV0p1bTBNOHBHWmlNeUl4ODVOdFE2R1ZjRnJOaVk2WTR5b2k2VWh0QnFpK0ZzZ0IyMmIrND06MS9iZzRqbkFtTUNWN1lGSzFxdUxzZz09SWmv"
-                loop controls
-                poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABblxqDOncIrfg4Oi304od29EIiDMu0ukCxKOBbLNFmUYkswcVy3tGEwaYS61bFyYwBoL0maJykYKWsS0MRgmGrgennD1uiSopNt-6tLYqFUlP47-jVtByiIE.jpg?r=9d3"
-                class="main-video"></video>
-            <h3 class="main-vid-title">All of us are dead : Season 1 Episode 1</h3>
-        </div>
+            <figure class="movie-detail-banner">
 
-        <div class="video-list-container">
+                <img src="/assets/images/all_of_us_are_dead.jpg" alt="">
 
-            <div class="playlist-title">
-                <span>Episodes</span>
-            </div>
-            
-            <div class="list active">
-                <video
-                    src="https://fvs.io/redirector?token=WHphZ1RNQmd5UzBDOTFqdnd4ZkEyd29iZ3RXcldLVlFzZ1NEYzlLNGp1R2V5SUt0U0tnNEdyU29wczVEU0NSTndIL3liUCs5WE50SzZ6Qk0zd3dYclByN3gySWV0eHJPbTNZN3ZGaFUzZkxHS0NmV0p1bTBNOHBHWmlNeUl4ODVOdFE2R1ZjRnJOaVk2WTR5b2k2VWh0QnFpK0ZzZ0IyMmIrND06MS9iZzRqbkFtTUNWN1lGSzFxdUxzZz09SWmv"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABblxqDOncIrfg4Oi304od29EIiDMu0ukCxKOBbLNFmUYkswcVy3tGEwaYS61bFyYwBoL0maJykYKWsS0MRgmGrgennD1uiSopNt-6tLYqFUlP47-jVtByiIE.jpg?r=9d3"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 1</h3>
-            </div>
+                <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=VE1QazZMMkZiRkFnZGhldGZtM2xFTlpzRW5rK1llR0tKckN0aE9DZkxnc0hoa0xKMUJqK3pVdHpsc29mZkpBbXlnOTJTcHZaMXFkNkNsS1dmWjV5MEowWUZxYkljZUc1TVdWYjBxQXQrY21qM2RGRGhVZVE2VG5HWXZOWnVMYzZoZzEvMXcrYnNDRzNFT0IwdUpTTWorLythNWYvYjdaNm1ROD06Yzd5MzZqKzlWaWh3bjFVN0VWVHh5QT09gG6K"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdjayddnOtbXKREY9ka9c790QyUww1F5ITph58CyK6eGB9fqTyxW55EYTlAWuV_sco5pD8ILGNkFnUwvOKM-7Lg_rWdVvTXJePKVjqfWKzIqJY8mvUvV1pVq.jpg?r=c40"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 2</h3>
-            </div>
+            </figure>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=ZWtRM1Y0ZTU4WkxtWVp3NzcrVkphNVNvSU1mVlpHMHBPak82anRSRFZtemljNTdJcHVhNlRtQXYxVjFIcG5NbGZKdTRJb05PV3FISlZxNFpQUC84QzZUVzNoSTd6eXpCTlBRaDRFWC85NmFDM3FYQURtcFRJaVVQdjA2SlEvRUN2UkRWWWQrazcxcmhBODJ2dGpYSmkxMGU4dHJ2ZkpwWGh1RT06aVVhSFBVa3UreFdWbDFzTVRITnhsUT09qNX8"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQNaA3ClTkwylMQcIJmwsLd5Dz0JQwFhUFM0isL567dthO_7tqY0dAyo6eetRaF4DI_uc5D_WXolFrruAv0eZDZPg-6uU7HubmsE_BXJaSCr36XqN0oziQ9B.jpg?r=f56"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 3</h3>
-            </div>
+            <div class="movie-detail-content">
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=RzV3dTBuRW1mWjR6aDd3aUdTV2xTbDlYZjZHV0sxN2dTUUtBV3RTa3NaYlh3TlZDaEZMM1JLbzJVQjg0SmM2dyt3U0d1bkhUK3dWSUR2Qm16SFArVEdFYjE3UzV3Z1MwSnJ3K3lsNWgxUHdqZ05KbXdCZk0xUU5RMW1GWlNWOHYrYUZBSnB0NDFxYXFpYUVZd3c0ZDBtOHNJMEJuL05pVjJQVT06a1pJUXZZTlFzVnF6Sk1wOTdIM2loUT092JyL"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABd_dYlgdmbB2wSg-4Zwez1RBQU_chLjXt4hyEVw2ql6TWglALQ_rWwAx9U2WcDgsuNFO2lxFaP8uo0O5OB4LIxpwKTRfnVCoPcu1VGX-tXU6z8hBoAG1yS9s.jpg?r=093"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 4</h3>
-            </div>
+                <p class="detail-subtitle">All Episodes</p>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=NFg0S3d5UllObjlXdHhoZmJYMzhiczlZMlpLU2NwQlJ5RXRZZ3lyRUkrZGxaUXV2c2lQWmdPRGQ1T1RUNXZJVlNXVDZ5WEZkZmhYeWFNcVhCMHBsNmliZTNmRWtLb3A5Q1l0UFFGSllrMUphODJkOTN0aWVRTWhLclhpcUV5MGJJYWp1K2VQY0dIVTFrd2lieUFxUGM0WGFwUHFWSHYwZWJRMD06OGc0ak9ZbzVsdHc1akE0cjRGY2gxdz09qJUq"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWN-wAxL_nsu-jUVgQN0Bqd5yqSCU6PC0Fk-nALt9JwRqCxbcMaXK8_ihg5C3JYYaNHX1Y6ceDqR0ZVhJbTt7ooiqHXIVYLCiSlMfZL-RxAfdfhJhG795N6P.jpg?r=840"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 5</h3>
-            </div>
+                <h1 class="h1 detail-title">
+                    All Of Us Are Dead
+                    <p class="detail-subtitle">Season 1</p>
+                </h1>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=MnBNVHJKOFBackdQMWRud3pQZE9LK1IxalcvVGJuYWpGemVGQ3E0dHBpbmtlUzlPbXlqNy8rakJ1OFVUczFFSjd6L3dna3Qzam14L3psNVlndmZRdW94V3JmSGZaOWdGamUxVGg2RWVZbUVxci93bHRFc0xDZ3hQSTlBSlh0RFIxTVhrV3E3N0Z5OHoyZTltU2hEOHpKR2dMSXFaSUxXdzEyRT06UStNc3dDdmo3dGdyZnpSM1FwWXVrQT09LV1k"
-                    class="list-video"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ-3hB6oWf5vx6lD80eFvb-yCBtczjjHNEowI5aeKPkRVLHAKbzrsHMoqHu4kHIsssubQ_QZ-fhMCBTW9JVzAWnYuB9CAgZzIfvhQm4IgPvfvBkuHA5lNbGZ.jpg?r=306"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 6</h3>
-            </div>
+                <div class="meta-wrapper">
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=OWhNb3BjdDBRUHNOK0RGVXYrSjQ2dzdiT3lkd3RnTE54bDh5bzdZTEl2RDErTTlDZWo3R3BqYyttYktHTGlnNkN2L0NpQjlaUHE4QjBnRHBFeTFtRk53dnRYeERxMkMvUEZtdGV1elkvVHBoNEZLdzJaVDZuNTBQVXVQRHhhVlJnaUpseE9GK1JmQXZMOHVKdHNmQUIxR2JqRXFHU1dTM3FtWT06bUIxVTZSNnFnVy82dFI2QXJaOG1jZz09UcUG"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABc5HN9PGCpugah4etIx0BT5rqc76kU2NC6DkmDTk31wuNOnmy4ZD84vNAwdSku15WxDfqjywQCOH30Q1Z5mSj_S2v5QTg5y_H3Sn_DB2a9CzD8J-H_43hz3A.jpg?r=cc4"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 7</h3>
-            </div>
+                    <div class="badge-wrapper">
+                        <div class="badge badge-fill">A</div>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=VC8yZzNLS242aisvOTRrMURnWHdmZXhBT2dkU3hwRzFVNzMyTElPMTBrQjNMbnZ3cEI1VXVVMkZhc1IrTEFyMUxMWkVXanlFQWxWWEZ5bGdQQXlXQ1YwTFNrS1Era2NIbVEwOVk1aUd2eXdJckhLVXRJeXlscFdSMGJjLy9jdEY2T2lGYnV2Wnh6SlcvQm5EZDFwcE5Wdk1JNmo0V2pROEJjQT06T0o1TndFQThIRnZBMFZ2dXJoMVVhdz09OpmM"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABVWclFYULlO3njadAelz1F8WnOVesQlw80a8Ze8Dg6RvBlzaDh6eePdAda68HUQQoobJI0M_Z9wokLJCIl4jFtNpjw-1Vhi3ZGDCNQJJIAE5tk5YUWfXGK1o.jpg?r=e56"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 8</h3>
-            </div>
+                        <div class="badge badge-outline">HD</div>
+                    </div>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=c1RJTHRMM2N6Qm53Y3JTbHFVQnEzK2NiK01TSVdidy9ONGlaUmNZR0FDZVpublA5RVdsMUp4Zmxya2hQeTcveVBZT21QS3d2b2VUYy9JQUpwdzMrUFdmQnIrQWEwb0J1R1BzNzgzTy9wbStWVVAzZnVYUmkwcXRFVmwzbGZzZEN1MWNHdG9kVWhJNkpZbzYrN09NZVZwbHp6N21hZFBGUDcyZz06QmtVNmprN1hIRm9sbERaTEtycy9DZz09qw9W"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfCSfbBb-TrOVKglZy0xiB0bUuScpIUF4S4rLueSPTP2yWAXC6Xuc94VIScOPYef2iws5PMnAY_-xrnwN5qeE6kEY9JwIs3_oCy3Q4-0vWkqITrcgcs-MyDi.jpg?r=e4d"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 9</h3>
-            </div>
+                    <div class="ganre-wrapper">
+                        <a href="#">Korean Drama,</a>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=ZmFKNjZjZWtiQU9VME04YlA4dS9TaldLTE5Edjk3WEtCZEJFS050VGVtUFJLTlg3OHlpcVFaYkNBVnh1K3l2QnQvUW01KzNaQkl2ZnVpejdUdGgrVk82d0dSR2ZISHcxdEZFcld4V1pvMW1nQ1Q1V1R2b3RnVGZQWjUxUWt6NGVlVTlpYVUyZk1pRlovMEd6Vy9ybm5yYmJDQWhYR3dadFRVcz06MVd0UGtjZDZteDNZRVFRV0U3OVZ1dz09M0YP"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABcH-MjqXpQw8dh7viGhQpjKDdZcv-tu1AbAVxL6askPMYNU2mbtMMMed9RUlGWydE3Bx4C8TrJjXQjixFxQGbzQdONTq0dcC3kZrgtASEhgFBfdZ5vLV7cR3.jpg?r=c10"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 10</h3>
-            </div>
+                        <a href="#">Zombie apocalypse,</a>
 
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=SCs3QUkrMnlVc2xTOEZxZVg3azFFYlpsdW9xSG1oSmdIOTduN2ZuV0dNTWZ5OUJDcW9xaG55QXdmbENBanJUVmFUZmtJSkNYQ1NMVHFLY3BKSkg0aFdram1yd0NRbnRFUTdUWDFDUVhVL2p4Nm92MktacnNUMEcrYU9vNk96YUFnYlE2ZXQwcElHWm9NOUh1Nlp1SmsvRHRJeHl0a1FHVWN0dz06dzZtQ3ZYL3BlMzBYcUE2Z294UWZNUT09m2RK"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABVj9R7DuMcuuSZhUG8QbUGDkerOX3giQkaFvlMb4VzLX1O2uTX8oN5Ih8FMzEO_c1U-k-IXQ2-iizEhtbx1fpkzJw1TvLANHsbPWQTmtaLzdeuQxBP-Pacra.jpg?r=6d3"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 11</h3>
-            </div>
-            <div class="list">
-                <video
-                    src="https://fvs.io/redirector?token=dmNLalFCRlBTN3VVVmNTWnRraExhNytpQ1hJQWl3Uyttc0dxMC9nMndXdk0rRHZsU2NOQ3gyYmdaUmo5eFp4UXlzVmxsbXRmUkhicDFHQmszYmtmb1VtZVlQaDUwRWM3OWdiRjN3K1YzK3NqNTBnQXJybmRvQjN0My9zYWU2M3duVlA0TmR4ckFQb1l6NU9OalY0USsxWlFtaVdRVWt3N2FYUT06QUFRNDQxY1A2YlRhSXdvS2Nibm9JZz094sOP"
-                    poster="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABesf4974sMFxYZQ5GHs_7d89AwscbzIc1QpU2Wy4eU-UDTzpnX5DM7O3gpgYAbZ79gPNSL3iP7ikLZ-CyB0QIyrVZAnqvPhLWozfQ9Ze42VgxN6wpTRRMfN9.jpg?r=48d"
-                    class="list-video"></video>
-                <h3 class="list-title">All of us are dead : Season 1 Episode 12</h3>
+
+                        <a href="#">Horror Fiction</a>
+                    </div>
+
+                    <div class="date-time">
+
+                        <div>
+                            <ion-icon name="calendar-outline"></ion-icon>
+
+                            <time datetime="2022">2022</time>
+                        </div>
+
+                        <div>
+                            <ion-icon name="play-outline"></ion-icon>
+
+                            <time datetime="PT115M">Season 1 <strong>-</strong> 12 Episodes</time>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="storyline">
+                    A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way
+                    out — or turn into one of the rabid infected.
+                </p>
+
+
+                <div class="details-actions">
+
+                    <button class="share">
+                        <ion-icon name="share-social"></ion-icon>
+                        <span>Share</span>
+                    </button>
+
+                    <!-- <div class="title-wrapper">
+                        <p class="title">Prime Video</p>
+
+                        <p class="text">Streaming Channels</p>
+                    </div> -->
+                    
+                    <button class="btn btn-primary">
+                        <ion-icon name="play"></ion-icon>
+
+                        <span><a style="color: white; font-size:15px;" href="goto-movie">Watch Now</a></span>
+                    </button>
+
+                </div>
+
+
             </div>
 
         </div>
+    </section>
+    <center>
+        <div class="container">
+            <iframe class="video-player" width="900" height="550" src="https://cinegrabber.com/p/8p6d2c816l13yed"
+                frameborder="0"></iframe>
+        </div>
+    </center>
 
-    </div>
-
-
-    <!-- <iframe name="framez" id="framez" allowfullscreen="true" class="video-player" vertical-align: middle;
-            width="1000" height="600" src="https://cinegrabber.com/v/dk42phxzq715888" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> -->
-
-
-
-    <!--  -->
-
-
+    <br><br><br>
 
 
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script>
-        let videoList = document.querySelectorAll('.video-list-container .list');
-
-        videoList.forEach(vid => {
-            vid.onclick = () => {
-                videoList.forEach(remove => { remove.classList.remove('active') });
-                vid.classList.add('active');
-                let src = vid.querySelector('.list-video').src;
-                let title = vid.querySelector('.list-title').innerHTML;
-                document.querySelector('.main-video-container .main-video').src = src;
-                document.querySelector('.main-video-container .main-video').play();
-                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
-            };
-        });
-    </script>
-
-
     <script src="./assets/js/script.js"></script>
 
     <!-- 
