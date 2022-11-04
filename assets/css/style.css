@@ -104,7 +104,6 @@ body.active {
     overflow: hidden;
 }
 
-
 /*-----------------------------------*\
  * #REUSED STYLE
 \*-----------------------------------*/
@@ -1297,9 +1296,22 @@ body.active {
 }
 
 .details-actions .share ion-icon {
-    font-size: 25px;
+    font-size: 30px;
     color: var(--white);
     margin-inline: auto;
+}
+
+.copy-link{
+    border: 2px solid var(--citrine);
+    border-radius: 25px;
+    padding: 10px;
+    columns: var(--citrine);
+    margin-left: -20px;
+}
+
+.copy-link:hover{
+    background-color: var(--citrine);
+    transition: .2s;
 }
 
 .details-actions .share span {
