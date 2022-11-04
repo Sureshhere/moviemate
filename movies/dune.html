@@ -195,11 +195,13 @@
 
 
                 <div class="details-actions">
-
-                    <button class="share">
+                    <input type="text" value="https://moviemateonline.vercel.app/movies/dune.html" id="myInput">
+                    
+                    <button value="https://moviemateonline.vercel.app/movies/dune.html" onclick="shareMovie" class="share">
                         <ion-icon name="share-social"></ion-icon>
-                        <span>Share</span>
+                        <!-- <span>Copy Link</span> -->
                     </button>
+                    <button class="copy-link" onclick="myFunction()"><span style="color: white;">Copy text</span></button>
 
                     <!-- <div class="title-wrapper">
                         <p class="title">Prime Video</p>
@@ -421,6 +423,24 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput");
+        
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+          
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
+    
 
     <!-- 
     - ionicon link
