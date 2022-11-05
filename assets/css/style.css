@@ -480,6 +480,16 @@ body.active {
     color: var(--citrine);
 }
 
+.nav-login{
+    display: none;
+    color: var(--white);
+    font-size: var(--fs-8);
+    width: 50%;
+    font-weight: var(--fw-500);
+    border: 2px solid var(--citrine);
+    padding: 10px;
+    border-radius: 50px;
+}
 .navbar-social-list {
     display: flex;
     justify-content: center;
@@ -549,7 +559,8 @@ body.active {
     /* font-size: 20px; */
     color: var(--citrine);
 }
-  
+
+ 
   .dropdown:hover .dropdown-content {
     display: block;
   }
@@ -1380,9 +1391,7 @@ body.active {
 \*-----------------------------------*/
 
 
-/**
- * responsive for large than 550px screen
- */
+
  
 
 @media (max-width: 550px) {
@@ -1420,13 +1429,18 @@ body.active {
       
       .dropdown {
         position: relative;
-        display: inline-block;
+        display: none;
         border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
         width: 100%;
       }
       
+      .nav-login{
+        display: block;
+        
+    }
+
       .dropdown-content {
-        display: none;
+        /* display: block; */
         position: absolute;
         background-color: var(--eerie-black);
         min-width: 160px;
@@ -1519,6 +1533,23 @@ body.active {
  * responsive for large than 768px screen
  */
 
+@media (min-width: 768px) and (max-width:920px){
+    .nav-login{
+        display: block;
+    }
+}
+
+@media (min-width: 550px) and (max-width:992px){
+    .nav-login{
+        display: block;
+    }
+    .dropdown{
+        display: none;
+    }
+}
+
+
+
 @media (min-width: 768px) {
     /**
    * CUSTOM PROPERTY
@@ -1584,7 +1615,6 @@ body.active {
     .lang-wrapper option {
         color: var(--black);
     }
-    /* dropdown */
     
     /**
    * HERO
