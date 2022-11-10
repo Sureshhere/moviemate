@@ -1,176 +1,574 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <script>
-        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-        if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
-
-        function mischandler() {
-            return false;
-        }
-
-        function mousehandler(e) {
-            var myevent = (isNS) ? e : event;
-            var eventbutton = (isNS) ? myevent.which : myevent.button;
-            if ((eventbutton == 2) || (eventbutton == 3)) return false;
-        }
-        document.oncontextmenu = mischandler;
-        document.onmousedown = mousehandler;
-        document.onmouseup = mousehandler;
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Mate - Best movie collections</title>
-
-    <!-- 
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-    <!-- 
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style2.css">
-
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body id="top">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
-    </div>
-
-
-
-    <!-- 
-    - #HEADER
-  -->
-
-    <header class="header" data-header>
-        <div class="container">
-
-            <div class="overlay" data-overlay></div>
-
-            <a href="./index.html" class="logo">
-                <img src="./assets/images/cinema.png" alt="Filmlane logo">
-            </a>
-
-
-
-            <button class="menu-open-btn" data-menu-open-btn>
-        <ion-icon name="reorder-two"></ion-icon>
-      </button>
-
-            <nav class="navbar" data-navbar>
-
-                <div class="navbar-top">
-
-                    <a href="./index.html" class="logo">
-                        <img src="./assets/images/cinema.png" alt="Filmlane logo">
-                    </a>
-
-                    <button class="menu-close-btn" data-menu-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-
-                </div>
-
-                <ul class="navbar-list">
-
-                    <li>
-                        <a href="index.html" class="navbar-link">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-link">Movie</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-link">Tv Show</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-link">Web Series</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-link">Contact us</a>
-                    </li>
-
-                </ul>
-
-                <ul class="navbar-social-list">
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <ion-icon name="logo-pinterest"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <ion-icon name="logo-youtube"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-    </header>
-
-    <div id="wrapper">
-            
+<!-- 
+    
             <iframe name="framez" id="framez" allowfullscreen="true" class="video-player" vertical-align: middle; width="1000" height="600" src="https://cinegrabber.com/v/ny68wa2ndp0xepq"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ -->
 
-        <!-- <embed class="video-player" width="1000px" height="600px" src="https://membed.net/streaming.php?id=ODgyMg==&title=Interstellar+HD-720p&typesub=SUB&sub=L2ludGVyc3RlbGxhci1oZC03MjBwL2ludGVyc3RlbGxhci1oZC03MjBwLnZ0dA==&cover=L2ludGVyc3RlbGxhci1lbnYvY292ZXIucG5n"
-            type="video/mp4"> -->
-
-
-
-    </div>
-
-    <!-- 
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
-
-    <!-- 
-    - ionicon link
-  -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Movie Mate - Best movie collections</title>
+ 
+ 
+     <!-- 
+     - favicon
+   -->
+     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+ 
+     <!-- 
+     - custom css link
+   -->
+     <link rel="stylesheet" href="./assets/css/style2.css">
+     <link rel="stylesheet" href="../assets/css/style.css">
+     <!-- 
+     - google font link
+   -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body id="top">
+ 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <!-- Preloader -->
+     <div id="preloader">
+         <div id="status">&nbsp;</div>
+     </div>
+ 
+ 
+ 
+     <!-- 
+     - #HEADER
+   -->
+ 
+     <header class="header" data-header>
+         <div class="container">
+ 
+             <div class="overlay" data-overlay></div>
+ 
+             <a href="./index.html" class="logo">
+                 <img src="./assets/images/cinema.png" alt="Filmlane logo">
+             </a>
+ 
+ 
+ 
+             <button class="menu-open-btn" data-menu-open-btn>
+                 <ion-icon name="reorder-two"></ion-icon>
+             </button>
+ 
+             <nav class="navbar" data-navbar>
+ 
+                 <div class="navbar-top">
+ 
+                     <a href="../index.html" class="logo">
+                         <img src="./assets/images/cinema.png" alt="Moviemate logo">
+                     </a>
+ 
+                     <button class="menu-close-btn" data-menu-close-btn>
+                         <ion-icon name="close-outline"></ion-icon>
+                     </button>
+ 
+                 </div>
+ 
+                 <ul class="navbar-list">
+ 
+                     <li>
+                         <a href="../index.html" class="navbar-link">Home</a>
+                     </li>
+ 
+                     <li>
+                         <a href="" class="navbar-link">Movie</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Tv Show</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Web Series</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Contact us</a>
+                     </li>
+ 
+                 </ul>
+ 
+                 <ul class="navbar-social-list">
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-twitter"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-facebook"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-pinterest"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-instagram"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-youtube"></ion-icon>
+                         </a>
+                     </li>
+ 
+                 </ul>
+ 
+             </nav>
+ 
+         </div>
+     </header>
+ 
+     <section class="movie-detail">
+         <div class="container">
+ 
+             <figure class="movie-detail-banner">
+ 
+                 <img src="/assets/images/movie-4.png" alt="">
+ 
+                 <button class="play-btn">
+                     <a style="color: yellow;" href="#goto-movie"><ion-icon name="play-circle-outline"></ion-icon></a>
+                 </button>
+ 
+             </figure>
+ 
+             <div class="movie-detail-content">
+ 
+                 <p class="detail-subtitle"></p>
+ 
+                 <h1 class="h1 detail-title">
+                     Spider-man : No Way Home
+                     <p class="detail-subtitle"></p>
+                 </h1>
+ 
+                 <div class="meta-wrapper">
+ 
+                     <div class="badge-wrapper">
+                         <div class="badge badge-fill">U/A</div>
+ 
+                         <div class="badge badge-outline">HD</div>
+                     </div>
+ 
+                     <div class="ganre-wrapper">
+                         <a href="#">Action,</a>
+ 
+                         <a href="#">Adventure,</a>
+                         <a href="#">Fantasy,</a>
+ 
+                         <a href="#">Sci-fi</a>
+                     </div>
+ 
+                     <div class="date-time">
+ 
+                         <div>
+                             <ion-icon name="calendar-outline"></ion-icon>
+ 
+                             <time datetime="2021">2021</time>
+                         </div>
+ 
+                         <div>
+                             <ion-icon name="time-outline"></ion-icon>
+ 
+                             <time datetime="PT115M">2hr  28mins</time>
+                         </div>
+ 
+                     </div>
+ 
+                 </div>
+ 
+                 <p class="storyline">
+                    Spider-Man seeks the help of Doctor Strange to forget his exposed secret identity as Peter Parker. However, Strange's spell goes horribly wrong, leading to unwanted guests entering their universe.
+                 </p>
+ 
+ 
+                 <div class="details-actions">
+                     <input type="text" value="https://moviemateonline.vercel.app/movies/spiderman-no-way-home.html" id="myInput">
+                     
+                     <button value="https://moviemateonline.vercel.app/movies/spiderman-no-way-home.html" onclick="shareMovie" class="share">
+                         <ion-icon name="share-social"></ion-icon>
+                         <!-- <span>Copy Link</span> -->
+                     </button>
+                     <button class="copy-link" onclick="myFunction()"><span style="color: white;">Copy link</span></button>
+                     <button class="btn btn-primary">
+                         <ion-icon name="play"></ion-icon>
+ 
+                         <span><a style="color: white; font-size:15px;" href="#goto-movie">Watch Now</a></span>
+                     </button>
+ 
+                 </div>
+ 
+ 
+             </div>
+ 
+         </div>
+     </section>
+     <center>
+         <div class="container" id="goto-movie">
+             <iframe  allowfullscreen class="video-player" width="900" height="550" src="https://cinegrabber.com/v/ny68wa2ndp0xepq"
+                 frameborder="0"></iframe>
+             
+         </div>
+ 
+         <br><br>
+ 
+ 
+         <!-- *************MOVIE CAST*********  -->
+ 
+         <!-- <div class="movie-cast">
+             <div>
+                 <b style="color: white; font-size:25px">Movie Cast</b>
+                 <div class="cast-cards ">
+                   <div class="cast-card">
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Timoth%C3%A9e_Chalamet_2017_Berlinale.jpg/330px-Timoth%C3%A9e_Chalamet_2017_Berlinale.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Timothée Chalamet</b>
+                           </p>
+                           <p class="card-text-center character">
+                             Paul Atreides
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Zendaya">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Zendaya_-_2019_by_Glenn_Francis.jpg/330px-Zendaya_-_2019_by_Glenn_Francis.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Zendaya</b>
+                           </p>
+                           <p class="card-text-center character">
+                             Chani
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Jason_Momoa">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jason_Momoa_%2843055621224%29_%28cropped%29.jpg/330px-Jason_Momoa_%2843055621224%29_%28cropped%29.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Jason Momoa</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Duncan Idaho
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Rebecca_Ferguson">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Rebecca_Ferguson_in_2018.jpg/330px-Rebecca_Ferguson_in_2018.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Rebecca Ferguson</b>
+                           </p>
+                           <p class="card-text-center character">
+                             Lady Jessica
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Oscar_Isaac">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Oscar_Isaac_by_Gage_Skidmore.jpg/330px-Oscar_Isaac_by_Gage_Skidmore.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Oscar Issac</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Leto Atreides
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a href="https://en.wikipedia.org/wiki/Josh_Brolin" target="_blank">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Josh_Brolin_Berlin_2016.jpg/330px-Josh_Brolin_Berlin_2016.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Josh Brolin</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Gurney Halleck
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a href="https://en.wikipedia.org/wiki/Dave_Bautista" target="_blank">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dave_Bautista_Photo_Op_GalaxyCon_Minneapolis_2019.jpg/330px-Dave_Bautista_Photo_Op_GalaxyCon_Minneapolis_2019.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Dave Bautista</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Beast Rabban Harkonnen
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                    <a href="https://en.wikipedia.org/wiki/Stellan_Skarsg%C3%A5rd" target="_blank">
+                     <p class="card-text-center">
+                         <img
+                           class="imagen"
+                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Stellan_Skarsg%C3%A5rd_at_the_2017_Berlinalevds.jpg/330px-Stellan_Skarsg%C3%A5rd_at_the_2017_Berlinalevds.jpg"
+                           alt=""
+                         />
+                       </p>
+                       <p class="card-text-center name">
+                         <b>Stellan Skarsgård</b>
+                       </p>
+                       <p class="card-text-center character">
+                           Vladimir Harkonnen
+                       </p>
+                    </a>
+                   </div>
+                   <div class="cast-card">
+                     <a href="https://en.wikipedia.org/wiki/Charlotte_Rampling" target="_blank">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Charlotte_Rampling_2016.jpg/330px-Charlotte_Rampling_2016.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Charlotte Rampling</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Reverend Mother
+                           </p>
+                     </a>
+                   </div>
+                   <div class="cast-card">
+                     <a href="https://en.wikipedia.org/wiki/Javier_Bardem" target="_blank">
+                         <p class="card-text-center">
+                             <img
+                               class="imagen"
+                               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Premios_Goya_2018_-_Javier_Bardem_%28cropped%29.jpg/330px-Premios_Goya_2018_-_Javier_Bardem_%28cropped%29.jpg"
+                               alt=""
+                             />
+                           </p>
+                           <p class="card-text-center name">
+                             <b>Javier Bardem</b>
+                           </p>
+                           <p class="card-text-center character">
+                               Javier Bardem
+                           </p>
+                     </a>
+                   </div>
+ 
+                   
+                 </div>
+               </div>
+         </div>> -->
+     </center
+ 
+ 
+     <br><br><br>
+ 
+ 
+ 
+ 
+ 
+     <footer class="footer">
+ 
+       <div class="footer-top">
+           <div class="container">
+ 
+               <div class="footer-brand-wrapper">
+ 
+                   <a href="./index.html" class="logo">
+                       <img src="./assets/images/cinema.png" alt="Filmlane logo">
+                   </a>
+ 
+                   <ul class="footer-list">
+ 
+                       <li>
+                           <a href="../index.html" class="footer-link">Home</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Movie</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">TV Show</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Web Series</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Anime</a>
+                       </li>
+                       <li>
+                           <a href="#" class="footer-link">K-Drama</a>
+                       </li>
+ 
+                   </ul>
+ 
+               </div>
+ 
+               <div class="divider"></div>
+ 
+               <div class="quicklink-wrapper">
+ 
+                   <ul class="quicklink-list">
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Faq</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Help center</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Terms of use</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Privacy</a>
+                       </li>
+ 
+                   </ul>
+ 
+                   <ul class="social-list">
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-facebook"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-twitter"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-pinterest"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-linkedin"></ion-icon>
+                           </a>
+                       </li>
+ 
+                   </ul>
+ 
+               </div>
+ 
+           </div>
+       </div>
+ 
+       <div class="footer-bottom">
+           <div class="container">
+ 
+               <p class="copyright">
+                   &copy; 2022 <a href="#">Suresh Choudhary</a>. All Rights Reserved
+               </p>
+ 
+               
+ 
+           </div>
+       </div>
+ 
+   </footer>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     <script src="./assets/js/script.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <script src="./assets/js/script.js"></script>
+ 
+     <script>
+         function myFunction() {
+           // Get the text field
+           var copyText = document.getElementById("myInput");
+         
+           // Select the text field
+           copyText.select();
+           copyText.setSelectionRange(0, 99999); // For mobile devices
+         
+           // Copy the text inside the text field
+           navigator.clipboard.writeText(copyText.value);
+           
+           // Alert the copied text
+           alert("Copied the text: " + copyText.value);
+         }
+     </script>
+     
+ 
+     <!-- 
+     - ionicon link
+   -->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+ </body>
+ 
+ </html>
