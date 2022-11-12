@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mate - Best movie collections</title>
+
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <div class="overlay" data-overlay></div>
+
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/cinema.png" alt="Filmlane logo">
+            </a>
+
+
+
+            <button class="menu-open-btn" data-menu-open-btn>
+                <ion-icon name="reorder-two"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+
+                    <a href="../index.html" class="logo">
+                        <img src="./assets/images/cinema.png" alt="Moviemate logo">
+                    </a>
+
+                    <button class="menu-close-btn" data-menu-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="../index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="" class="navbar-link">Movie</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Tv Show</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Web Series</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">Contact us</a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-social-list">
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="movie-detail">
+        <div class="container">
+
+            <figure class="movie-detail-banner">
+
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/34/TheNunPoster.jpg" alt="">
+
+                <button class="play-btn">
+                    <a style="color: yellow;" href="#goto-movie">
+                        <ion-icon name="play-circle-outline"></ion-icon>
+                    </a>
+                </button>
+
+            </figure>
+
+            <div class="movie-detail-content">
+
+                <p class="detail-subtitle"></p>
+
+                <h1 class="h1 detail-title">
+                    The Nun - 2018
+                    <p class="detail-subtitle"></p>
+                </h1>
+
+                <div class="meta-wrapper">
+
+                    <div class="badge-wrapper">
+                        <div class="badge badge-fill">A</div>
+
+                        <div class="badge badge-outline">HD</div>
+                    </div>
+
+                    <div class="ganre-wrapper">
+                        <a href="#">Horror,</a>
+                        <a href="#">Thriller</a>
+                    </div>
+
+                    <div class="date-time">
+
+                        <div>
+                            <ion-icon name="calendar-outline"></ion-icon>
+
+                            <time datetime="2018">2018</time>
+                        </div>
+
+                        <div>
+                            <ion-icon name="time-outline"></ion-icon>
+
+                            <time datetime="PT115M">1hr 36min</time>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="storyline">
+                    A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican
+                    to investigate the death of a young nun in Romania and confront a malevolent force in the form of a
+                    demonic nun.
+                </p>
+
+
+                <div class="details-actions">
+                    <input type="text" value="https://moviemateonline.vercel.app/movies/the_nun.html" id="myInput">
+
+                    <button value="https://moviemateonline.vercel.app/movies/the_nun.html" onclick="shareMovie"
+                        class="share">
+                        <ion-icon name="share-social"></ion-icon>
+                        <!-- <span>Copy Link</span> -->
+                    </button>
+                    <button class="copy-link" onclick="myFunction()"><span style="color: white;">Copy
+                            link</span></button>
+                    <button class="btn btn-primary">
+                        <ion-icon name="play"></ion-icon>
+
+                        <span><a style="color: white; font-size:15px;" href="#goto-movie">Watch Now</a></span>
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <center>
+        <div class="container">
+            <iframe id="goto-movie" allowfullscreen class="video-player" width="900" height="550"
+                src="https://cinegrabber.com/v/z70zwujrr-je7dx" frameborder="0"></iframe>
+
+        </div>
+
+        <br><br>
+
+
+        <!-- *************MOVIE CAST*********  -->
+
+        <div class="movie-cast">
+            <div>
+                <b style="color: white; font-size:25px">Movie Cast</b>
+                <div class="cast-cards ">
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Taissa_Farmiga">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Taissa_Farmiga_%282016%29_%28cropped%29.jpg/330px-Taissa_Farmiga_%282016%29_%28cropped%29.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Taissa Farmiga</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Sister Irene
+                            </p>
+                        </a>
+                    </div>
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Demi%C3%A1n_Bichir">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Demi%C3%A1n_Bichir_by_Gage_Skidmore.jpg/330px-Demi%C3%A1n_Bichir_by_Gage_Skidmore.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Demián Bichir</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Father Burke
+                            </p>
+                        </a>
+                    </div>
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Bonnie_Aarons">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Bonnie_Aarons_at_Tara_Cardinal%27s_Japan_Relief_Celebrity_Event.jpg/330px-Bonnie_Aarons_at_Tara_Cardinal%27s_Japan_Relief_Celebrity_Event.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Bonnie Aarons</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Valak/The Nun
+                            </p>
+                        </a>
+                    </div>
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Charlotte_Hope">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tFyn1QyNPqrhDmTkRKiWMidlCkD.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Charlotte Hope</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Sister Victoria
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Ingrid_Bisu">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ingrid_Bi%C8%99u_2016_%28cropped00%29.jpg/330px-Ingrid_Bi%C8%99u_2016_%28cropped00%29.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Ingrid Bisu</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Sister Oana
+                            </p>
+                        </a>
+                    </div>
+                    <div class="cast-card">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Michael_Smiley">
+                            <p class="card-text-center">
+                                <img class="imagen"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Michael_Smiley_%28cropped%29.jpg/330px-Michael_Smiley_%28cropped%29.jpg"
+                                    alt="" />
+                            </p>
+                            <p class="card-text-center name">
+                                <b>Michael Smiley</b>
+                            </p>
+                            <p class="card-text-center character">
+                                Bishop Bishara
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center <br><br><br>
+
+
+
+
+
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <a href="./index.html" class="logo">
+                        <img src="./assets/images/cinema.png" alt="moviemate logo">
+                    </a>
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <a href="../index.html" class="footer-link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Movie</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">TV Show</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Web Series</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Anime</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">K-Drama</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="quicklink-wrapper">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="#" class="quicklink-link">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="quicklink-link">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    &copy; 2022 <a href="#">Suresh Choudhary</a>. All Rights Reserved
+                </p>
+
+
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
