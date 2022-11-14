@@ -6,7 +6,108 @@
     <title>MovieMate - Movies</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="/assets/css/movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+
+        .container {
+            width: 992px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content;
+            outline: none;
+        }
+
+        .wtchbutn {
+            font-size: 18px;
+            color: yellow;
+            font-weight: 500;
+            text-transform: uppercase;
+            background-color: black;
+            position: absolute;
+            /* min-width: 100%;  */
+            width: 100%;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            overflow: hidden;
+            margin-bottom: 140px;
+        }
+
+        .mv-crd-name{
+            font-size: 22px;
+            font-weight: 600;
+            color: black;
+            text-shadow: 0 0 5px #ffffff, 0 0 7px #ffffff;
+        }
+
+        .btn:active {
+            transform: scale(0.99);
+        }
+
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+        }
+
+        .modal {
+            width: 550px;
+            position: fixed;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: top 0.3s ease-in-out;
+            border: 1px solid #ccc;
+            z-index: 31;
+            background-color: yellow;
+        }
+
+        .modal.active {
+            top: 30%;
+        }
+
+        .movie-trail-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .modal .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+
+        .body {
+            margin: 0 auto;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        #overlay.active {
+            display: block;
+        }
+    </style>
 </head>
 
 
@@ -71,548 +172,277 @@
         <a class="next" onclick="plusSlides(1)">❯</a>
 
     </div>
-    <!-- 
-        carousel
-     -->
     <br><br>
     <div class="caro-set">
         <div id="hindi" class="sec-title">
             <h1>Bollywood Movies</h1>
         </div>
         <div class="movie-container">
+
+            <!-- MODEL 1 => Shamsheera -->
+            <div class="modal" id="modal1">
+                <div class="header">
+                    <div class="movie-trail-title">Shamsheera Trailer</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube.com/embed/UHYUeZ8JszQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Model 2 => brahmastra -->
+            <div class="modal" id="modal2">
+                <div class="header">
+                    <div class="movie-trail-title">Brahmastra - Trailer</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/V5jVntRVl-0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <!-- Model 3 => ye jawani hai deewani -->
+            <div class="modal" id="modal3">
+                <div class="header">
+                    <div class="movie-trail-title">Yeh jawani hai deewani</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/Rbp2XUSeUNE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <!-- Model 4 => sooryavanshi -->
+            <div class="modal" id="modal4">
+                <div class="header">
+                    <div class="movie-trail-title">Sooryavanshi - Trailer</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/u5r77-OQwa8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+            <!-- Model 5 => padmavat -->
+            <div class="modal" id="modal5">
+                <div class="header">
+                    <div class="movie-trail-title">Padmaavat - Trailer</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/X_5_BLt76c0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <!-- Model 6 => shershaah -->
+            <div class="modal" id="modal6">
+                <div class="header">
+                    <div class="movie-trail-title">Shershaah - Trailer</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/Q0FTXnefVBA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <!-- Model 7 => Razzi -->
+            <div class="modal" id="modal7">
+                <div class="header">
+                    <div class="movie-trail-title">Razzi</div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/YjMSttRJrhA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+
+            <!-- movie - cards -->
             <section class="horizontal-scroll-cards">
                 <article>
-                    <!--shamsheera -->
+                    <!--movie card model 1 shamsheera -->
                     <div class="parentdiv">
-
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi315343385/1434659607842-pgv4ql-1656574711708.mp4?Expires=1668426766&Signature=IkU6E4orDYZUvTFau-waVnUoj81Gr0RsDtTSKCpyNBEGlXGxdbHMR8h0E-X19SHMI5VrjnxH-oiPcyJAwOYQyW2mLOf9elvIAlwTiS1~pkR7oZelw9wnXYtb0N6eXCtq7unKLY10lovu1QWFfmlYJJXgMHgVZxF4gKeOfbqi8lTwoFpXIYmXGzIyvEpdV3Xl2j2TSp3EQw0ykIoV0eBoA4x5XQbeMynXyYL5u86r3aPcTKg7cbEaw1HMSlKRQVzQTNi2XaCx6ftTm6gccnE12oxiI7cf40vAQthEf6nOOm5onf8-0dNogCX5cvbvLnfF6Ish1mV20I9~I7bq59yOyA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" muted autoplay loop
-                            controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                        <div class="container">
+                            
+                        <p class="mv-crd-name">Shamsheera</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal1">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
                     <img src="https://m.media-amazon.com/images/S/pv-target-images/7f868ea28377d74dc021d1c1f4cf7b8c6fc5f1ccb68230d36dc88ef3ad0faf53._UR1920,1080_SX532_.jpg"
                         alt="">
                 </article>
                 <article>
+                    <!--movie card model 2 brahmastra -->
                     <div class="parentdiv">
-                        <!-- sonu ke titu ki sweety -->
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi1350809625/1434659607842-pgv4ql-1514375797841.mp4?Expires=1668427449&Signature=TJy09~CREx8L-tNE6TcKVn-CfPBy-Wsb9-92ZS7k3soQm5rv6XxYYdG-zs-Co1fLyVNXakRSlZhii9lkuOWZJRPJuhR8voooQi~upw1xSiclKssBD8mte90eObBMBBqrsvrJikDcebmjVAWwZShr2OPA8MIW6LeEefiDw6kfNBC7dt0J1H~-zuk3GKcSmRlCYfU5ay~vmZghoDW7aA6w0Joa0XhKZMgpdkpY~0DVa7a4-z4dnsEdGMmBj0nJ7d676VrzOEe4xalNGN~vC1eIoJRbBfq-91O0iCcmQnlm4QUoMr4lfLtbrhbL6kPvGIoV4A2GyUrmRLvjPjb0BFfudA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" muted autoplay loop
-                            controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                        <div class="container">
+                            <p class="mv-crd-name">Brahmastra</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal2">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
-                    <img src="https://m.media-amazon.com/images/S/pv-target-images/dfb788acd0dcbd94cdfd66b3553ae94fc1dcbede3fe2d63f7dc6d26b3197a118._UR1920,1080_SX658_.jpg"
-                        alt="">
+                    <img src="/assets/images/movies/brahmastra.jpg" alt="">
                 </article>
                 <article>
-                    <!-- yeh jawani hai dewani -->
-
+                    <!--movie cardmodel 3  yeh jawani hai dewani -->
                     <div class="parentdiv">
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi315343385/1434659607842-pgv4ql-1656574711708.mp4?Expires=1668426766&Signature=IkU6E4orDYZUvTFau-waVnUoj81Gr0RsDtTSKCpyNBEGlXGxdbHMR8h0E-X19SHMI5VrjnxH-oiPcyJAwOYQyW2mLOf9elvIAlwTiS1~pkR7oZelw9wnXYtb0N6eXCtq7unKLY10lovu1QWFfmlYJJXgMHgVZxF4gKeOfbqi8lTwoFpXIYmXGzIyvEpdV3Xl2j2TSp3EQw0ykIoV0eBoA4x5XQbeMynXyYL5u86r3aPcTKg7cbEaw1HMSlKRQVzQTNi2XaCx6ftTm6gccnE12oxiI7cf40vAQthEf6nOOm5onf8-0dNogCX5cvbvLnfF6Ish1mV20I9~I7bq59yOyA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" muted autoplay loop
-                            controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                        <div class="container">
+                            <p class="mv-crd-name">Yeh Jawani Hai Deewani</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal3">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
-
                     <img src="https://m.media-amazon.com/images/S/pv-target-images/1537002659b95615776a3ee885502e7f299b0ae63ba525d671cbce720e4234e9._UR1920,1080_SX532_.jpg"
                         alt="">
                 </article>
                 <article>
+                    <!--movie cardmodel 4 sooryanvanshi  -->
                     <div class="parentdiv">
-                        <!-- street dancer 3d -->
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi1914617625/1434659607842-pgv4ql-1576656621227.mp4?Expires=1668427631&Signature=rP4stPFEggMduNKkeB3f4I5-QkJ0kjzVN5Ukt1N3~sIT2In9SlayLEcEWexPPrZsDtKhC8lhbeVI5cWrlAqwUEbA3xFJRgamij2BYVvKb-cu4xUasFJL-Mq0m-PjFghWYPxBibJ16nSCtJpCF7N~VKXHXiaFxSAxcFoO7rmnJQu2WRMVjW6THTcvxJT07xLGgzGloCk45m9fo1Ees8uYsuAuazl83gkpQAn0EOcc-5devetFr3wWd5jqOCquAhEoczNt4FHfP2YoqYFMsKx8po-17m62IpS0ZVUiSmIxZNM4pBBSPi7ofl5~hK4hY-LoKflhqZUjTBI4-Dj48N4kAQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" muted autoplay loop
-                            controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                        <div class="container">
+                            <p class="mv-crd-name">Sooryavanshi</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal4">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
-                    <img src="https://m.media-amazon.com/images/S/pv-target-images/865dce282777a1a8b1be763d31af9882155959094b59e97c8e43de6e986f18ca._UR1920,1080_SX532_.jpg"
-                        alt="">
-                </article>
-
-                <article>
-                    <div class="parentdiv">
-                        <!-- bachhann pandey -->
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi1969013529/1434659607842-pgv4ql-1647006195778.mp4?Expires=1668427208&Signature=lT-DZImDiA9qy0qKrkW200Jo0I5lOaosoQaQLasIe21IvYk7C0GPE40uIXm~CdSQTBS6vCRBkspERRIrNdS~Q-MFq-EA7CTgrAdAJ1mQZgvk~u5ZZW~wfAi4qVCLhDyt809AC5tVs739AGkIDctUZAHrImax1TQbsDvUjAi8kdH2GlTUZ-T2agEdm3MgJ7meX1NlT7z~xbIJwP8NiYLBArBFuFsDGlmJifxHarne41UCrQOyjnwAlPS2wTRsrdY1~8q-1dhzO4M5lJOWqoEVz5f4mxxDu7NORyJV0lM7HYqTXB9fRAOcZ-I9Q3EUUpZILiUPxHpQp-Ue3oxBbOOX5w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            muted autoplay loop controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://m.media-amazon.com/images/S/pv-target-images/4b82d2b0222af5655200faa213cc284d56ca6341e82f5ddf0d64ff03ea13bec4._UR1920,1080_SX532_.jpg"
-                        alt="">
+                    <img src="assets/images/movies/sooryavanshi.jpg" alt="">
                 </article>
                 <article>
+                    <!--movie cardmodel 5 padmaavat -->
                     <div class="parentdiv">
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi2472065049/1434659607842-pgv4ql-1524849439270.mp4?Expires=1668427889&Signature=SF3Wwtbkrk8Wwf5eQXDGeiadW2zfX9joMf~KQOL3Z~KVXBCKvbwqjkU4kGJsL4ugJ6Bm6hVF3li4xv0RTJD9oC~QVTH6KF23N1AqVWOPpU9XsBp50XXh4O9I33jqJf~8or-UZOO1UIvSqxRRoFhu4fSfHtIsXe9VJTIlo0skmjSDmOwaQXYZfZ1DjJXyTgHpGhHdx~4qmS66Og-FkWKPbnHn87o9PSZ1mpIsvrzR0bkmK~fEsHDMO7cKzeJcRf3~9pdkeNJBgkr8KRpCfiDR00gI~vtw7oulfb5~irxPhoiDylJPZ8hAN8jR09Ofn0omWYLWM2KoTCy2xdwKUJgbyw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            muted autoplay loop controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://m.media-amazon.com/images/S/pv-target-images/2c69ecf2364246f16b4ff521a9848594e359e29b07c3997252616834655cbb8e._UR1920,1080_SX532_.jpg"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!-- padmawat -->
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi1047509273/1434659607842-pgv4ql-1507571396186.mp4?Expires=1668428064&Signature=WUasd5FVftgA9B-llwXmteDlcbVGKYQFobGK4I1etiOO1qOFVnk-VRfa7y-QueqDXUHaamRvKhOTvVwWGgYwEFh0dVHxRSpXTMpsaNVHGw4bPvixB1F2kDVzpTLxv5Zk5JHoz31geo7bURVMBYW5I6U9C79RZyteMJreyClId68VRnuyVuwSybXW1aPp93AQs5dks0uLMqDPGsTL2ZVJ2MHC7b9Q~4nzWI48ndpbYMNE0sWPmfeQ~BreN-aVB-7Fgr62wuKa2RT-CERW0EOBK73YjD62NLGVJc1ANTmWj4Iqrl6mvn8ju99LgFsG3f0zTVrKb0ONQ5XUor7qdQCjqw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            muted autoplay loop controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                        <div class="container">
+                            <p class="mv-crd-name">Padmaavat</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal5">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
                     <img src="https://m.media-amazon.com/images/S/pv-target-images/cf589afbbb89d82d2b729ce0e260ac32b5ad03cb19020ff70d8ed1c3eceb9339._UR1920,1080_SX532_.jpg"
                         alt="">
                 </article>
-                <article>
-                    <div class="parentdiv">
-                        <!-- sheershah -->
-                        <video class="vid"
-                            src="https://imdb-video.media-imdb.com/vi712687641/1434659607842-pgv4ql-1627247549349.mp4?Expires=1668427891&Signature=uZJ9Bivfv2SGVuX7F9aL-HCECUoTGSMSUVQTflreeYo72A6UFZm1szTLPd0I6~St2lywv60Ax5YvmT3E6ztWJppH4TLyNKva~Y6p1sjcvmus-t10UjDjj1yBVaCg0Hr-q9L7tf0k8P6mPxpPvrzPE-~TomG6sGe2iW~noy4lCI2RcItNR3h-D52PouWuTxB4VQFtUtRr~CkibQFgIJhqwdNOlEz3iDpqzBaTiNfPM2rELcB6lBZnbvJK2vyUMAUEvnOBhU0WXkKRO0ml-EvR6qJhU4~qeI8uJ43D2GI65KnXyeIYq3TgdOF8E0NANsS~foPGfIuVA8Q5l2S76vhUag__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
-                            muted autoplay loop controls></video>
 
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
+                <article>
+                    <!--movie cardmodel 6 shershaah  -->
+                    <div class="parentdiv">
+                        <div class="container">
+                            <p class="mv-crd-name">Shershaah</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal6">Watch Trailer</button>
+                            <br />
+                        </div>
                     </div>
                     <img src="https://m.media-amazon.com/images/S/pv-target-images/3de8bc910ea9b1498905f9402400df3c086f0ea9bc35d12bc20f0b133ea37e23._UR1920,1080_SX532_.jpg"
                         alt="">
                 </article>
+                <article>
+                    <!--movie cardmodel 7  RAAZI  -->
+                    <div class="parentdiv">
+                        <div class="container">
+                            <p class="mv-crd-name">Raazi</p>
+                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="btn wtch-btn" data-target="#modal7">Watch Trailer</button>
+                            <br />
+                        </div>
+                    </div>
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/2c69ecf2364246f16b4ff521a9848594e359e29b07c3997252616834655cbb8e._UR1920,1080_SX532_.jpg"
+                        alt="">
+                </article>
             </section>
         </div>
         <br>
-        <!-- telugu -->
 
-        <div id="telugu" class="sec-title">
-            <h1>Telugu Movies</h1>
-        </div>
-        <div class="movie-container">
-            <section class="horizontal-scroll-cards">
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
 
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-            </section>
-        </div>
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
 
         <!-- 
-            english
-         -->
-        <br>
+        video-modal
+     -->
+        <script>
+            const btns = document.querySelectorAll("[data-target]");
+            const close_modals = document.querySelectorAll(".close-modal");
+            const overlay = document.getElementById("overlay");
 
-        <div id="english" class="sec-title">
-            <h1>English Movies</h1>
-        </div>
-        <div class="movie-container">
-            <section class="horizontal-scroll-cards">
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
+            btns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    document.querySelector(btn.dataset.target).classList.add("active");
+                    overlay.classList.add("active");
+                });
+            });
 
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-            </section>
-        </div>
-        <!-- horror -->
-        <br>
+            close_modals.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const modal = btn.closest(".modal");
+                    modal.classList.remove("active");
+                    overlay.classList.remove("active");
+                });
+            });
 
-        <div id="horror" class="sec-title">
-            <h1>Horror Movies</h1>
-        </div>
-        <div class="movie-container">
-            <section class="horizontal-scroll-cards">
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-            </section>
-        </div>
-        <!-- comedy -->
-        <br>
-        <div id="comedy" class="sec-title">
-            <h1>Comedy Movies</h1>
-        </div>
-        <div class="movie-container">
-            <section class="horizontal-scroll-cards">
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-
-                        <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch
-                                    now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-                <article>
-                    <div class="parentdiv">
-                        <!--  -->
-                        <video class="vid" src="" muted autoplay loop controls></video>
-                        
-                    <button class="wtch-btn"><span class="wtch-txt"><a href="/error404.html">watch now</a></span></button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1620029288530-4ff6a684e33d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
-                        alt="">
-                </article>
-            </section>
-        </div>
-    </div>
-
-
-
-
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
-    <!-- 
-<script>
-  
-    // Targeting video element 
-    let clip = document.querySelector(".vid")
-
-    /* Applying mouseover event on video clip 
-    and then we call play() function to play 
-    the video when the mouse is over the video */
-    clip.addEventListener("mouseover", function (e) {
-        clip.play();
-    })
-
-    /* Applying mouseout event on video clip 
-    and then we call pause() function to stop 
-    the video when the mouse is out the video */
-    clip.addEventListener("mouseout", function (e) {
-        clip.pause();
-    })
-</script> -->
+            window.onclick = (event) => {
+                if (event.target == overlay) {
+                    const modals = document.querySelectorAll(".modal");
+                    modals.forEach((modal) => modal.classList.remove("active"));
+                    overlay.classList.remove("active");
+                }
+            };
+        </script>
 </body>
 
 </html>
