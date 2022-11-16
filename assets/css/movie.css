@@ -42,6 +42,19 @@ section.horizontal-scroll-cards {
     opacity: 1;
 }
 
+div.text{
+    font-size: 20px;
+    border: 2px solid yellow;
+    background-color: black;
+    width: fit-content;
+    margin-left: 45%;
+}
+.text:hover{
+    box-shadow: 8px 8px yellow;
+    transition: .2s ease-in;
+}
+
+
 
 .vid {
     position: absolute;
