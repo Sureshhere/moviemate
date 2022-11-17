@@ -55,7 +55,6 @@ div.text{
 }
 
 
-
 .vid {
     position: absolute;
     right: 0;
@@ -69,7 +68,7 @@ div.text{
     overflow: hidden;
 }
 
-.wtch-btn {
+.watch-button {
     font-size: 18px;
     color: yellow;
     font-weight: 500;
