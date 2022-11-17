@@ -15,7 +15,7 @@
             margin: 0 auto;
         }
 
-        .btn {
+        .butn {
             font-size: 14px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -24,7 +24,7 @@
             outline: none;
         }
 
-        .wtchbutn {
+        .watch-butn {
             font-size: 18px;
             color: yellow;
             font-weight: 500;
@@ -47,7 +47,7 @@
             text-shadow: 0 0 5px #ffffff, 0 0 7px #ffffff;
         }
 
-        .btn:active {
+        .butn:active {
             transform: scale(0.99);
         }
 
@@ -110,7 +110,7 @@
 </head>
 
 
-<body style="background-color: hsl(207, 19%, 11%);">
+<body id="top" style="background-color: hsl(207, 19%, 11%);">
 
     <div class="bg-gray-100">
         <header class="sticky top-0 z-30 w-full px-2 py-4 sm:px-4 shadow-xl">
@@ -203,7 +203,7 @@
             <div class="modal" id="modal1">
                 <div class="header">
                     <div class="movie-trail-title">Shamsheera Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/UHYUeZ8JszQ"
@@ -217,7 +217,7 @@
             <div class="modal" id="modal2">
                 <div class="header">
                     <div class="movie-trail-title">Brahmastra - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/V5jVntRVl-0"
@@ -232,7 +232,7 @@
             <div class="modal" id="modal3">
                 <div class="header">
                     <div class="movie-trail-title">Yeh jawani hai deewani</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/Rbp2XUSeUNE"
@@ -247,7 +247,7 @@
             <div class="modal" id="modal4">
                 <div class="header">
                     <div class="movie-trail-title">Sooryavanshi - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/u5r77-OQwa8"
@@ -263,7 +263,7 @@
             <div class="modal" id="modal5">
                 <div class="header">
                     <div class="movie-trail-title">Padmaavat - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/X_5_BLt76c0"
@@ -278,7 +278,7 @@
             <div class="modal" id="modal6">
                 <div class="header">
                     <div class="movie-trail-title">Shershaah - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/Q0FTXnefVBA"
@@ -293,7 +293,7 @@
             <div class="modal" id="modal7">
                 <div class="header">
                     <div class="movie-trail-title">Razzi</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/YjMSttRJrhA"
@@ -314,8 +314,8 @@
                         <div class="container">
 
                             <p class="mv-crd-name">Shamsheera</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal1">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal1">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -327,8 +327,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Brahmastra</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal2">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal2">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -339,8 +339,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Yeh Jawani Hai Deewani</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal3">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal3">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -352,8 +352,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Sooryavanshi</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal4">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal4">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -364,8 +364,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Padmaavat</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal5">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal5">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -378,8 +378,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Shershaah</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal6">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal6">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -391,8 +391,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Raazi</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modal7">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modal7">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -422,7 +422,7 @@
             <div class="modal" id="modalt1">
                 <div class="header">
                     <div class="movie-trail-title">Yashoda Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <iframe width="548" height="315" src="https://www.youtube.com/embed/fZWjsFraE1s"
                     title="Yashoda Trailer (Telugu) | Samantha, Varalaxmi Sarathkumar | Manisharma | Hari - Harish"
@@ -435,7 +435,7 @@
             <div class="modal" id="modalt2">
                 <div class="header">
                     <div class="movie-trail-title">Ante sundaraniki - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/kg3Xd260qIY"
@@ -450,7 +450,7 @@
             <div class="modal" id="modalt3">
                 <div class="header">
                     <div class="movie-trail-title">Pushpa - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/Q1NKMPhP8PY"
@@ -466,7 +466,7 @@
             <div class="modal" id="modalt4">
                 <div class="header">
                     <div class="movie-trail-title">Uppena - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/fB3RcpbLvco"
@@ -482,7 +482,7 @@
             <div class="modal" id="modalt5">
                 <div class="header">
                     <div class="movie-trail-title">Jathi Ratnalu - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/HXckl7c6cL4"
@@ -497,7 +497,7 @@
             <div class="modal" id="modalt6">
                 <div class="header">
                     <div class="movie-trail-title">Major - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/UoM42huMhP0"
@@ -513,7 +513,7 @@
             <div class="modal" id="modalt7">
                 <div class="header">
                     <div class="movie-trail-title">Bharat Ane Nenu - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube-nocookie.com/embed/IvSoRWkaKn4"
@@ -527,7 +527,7 @@
             <div class="modal" id="modalt8">
                 <div class="header">
                     <div class="movie-trail-title">Happy days - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
 
@@ -545,8 +545,8 @@
                         <div class="container">
 
                             <p class="mv-crd-name">Yashoda</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt1">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt1">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -557,8 +557,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Ante sundaraniki</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt2">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt2">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -569,8 +569,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Pushpa</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt3">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt3">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -582,8 +582,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Uppena</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt4">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt4">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -594,8 +594,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Jathi Ratnalu</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt5">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt5">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -607,8 +607,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Major</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt6">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt6">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -619,8 +619,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Bharat Ane Nenu</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt7">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt7">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -632,8 +632,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Happy days</p>
-                            <button class="btn wtchbutn"><a href="/comingsoon.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalt8">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/comingsoon.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalt8">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -665,7 +665,7 @@
             <div class="modal" id="modalh1">
                 <div class="header">
                     <div class="movie-trail-title">Interstellar - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <iframe width="548" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E"
                     title="YouTube video player" frameborder="0"
@@ -677,7 +677,7 @@
             <div class="modal" id="modalh2">
                 <div class="header">
                     <div class="movie-trail-title">Dune - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/n9xhJrPXop4"
@@ -692,7 +692,7 @@
             <div class="modal" id="modalh3">
                 <div class="header">
                     <div class="movie-trail-title">Spiderman - No way home - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/JfVOs4VSpmA"
@@ -707,7 +707,7 @@
             <div class="modal" id="modalh4">
                 <div class="header">
                     <div class="movie-trail-title">The Batman - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/mqqft2x_Aa4"
@@ -723,7 +723,7 @@
             <div class="modal" id="modalh5">
                 <div class="header">
                     <div class="movie-trail-title">Avatar - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/5PSNL1qE6VY"
@@ -738,7 +738,7 @@
             <div class="modal" id="modalh6">
                 <div class="header">
                     <div class="movie-trail-title">Guardians of the galaxy - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/d96cjJhvlMA"
@@ -753,7 +753,7 @@
             <div class="modal" id="modalh7">
                 <div class="header">
                     <div class="movie-trail-title">Texas Chainsaw Massacre - Trailer</div>
-                    <button class="btn close-modal">&times;</button>
+                    <button class="butn close-modal">&times;</button>
                 </div>
                 <div class="body">
                     <iframe width="548" height="315" src="https://www.youtube.com/embed/zcI6SFiK_yk"
@@ -775,9 +775,9 @@
                         <div class="container">
 
                             <p class="mv-crd-name">Interstellar</p>
-                            <button class="btn wtchbutn"><a href="/movies/interstellar.html">Watch
+                            <button class="butn watch-butn"><a href="/movies/interstellar.html">Watch
                                     movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh1">Watch Trailer</button>
+                            <button class="butn watch-button" data-target="#modalh1">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -789,8 +789,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Dune</p>
-                            <button class="btn wtchbutn"><a href="/movies/dune.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh2">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/movies/dune.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalh2">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -802,9 +802,9 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Spiderman - No way home</p>
-                            <button class="btn wtchbutn"><a href="/movies/spiderman-no-way-home.html">Watch
+                            <button class="butn watch-butn"><a href="/movies/spiderman-no-way-home.html">Watch
                                     movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh3">Watch Trailer</button>
+                            <button class="butn watch-button" data-target="#modalh3">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -816,8 +816,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">The Batman</p>
-                            <button class="btn wtchbutn"><a href="movies/the-batman.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh4">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="movies/the-batman.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalh4">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -829,8 +829,8 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Avatar</p>
-                            <button class="btn wtchbutn"><a href="/movies/avatar-2009.html">Watch movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh5">Watch Trailer</button>
+                            <button class="butn watch-butn"><a href="/movies/avatar-2009.html">Watch movie</a></button><br>
+                            <button class="butn watch-button" data-target="#modalh5">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -842,9 +842,9 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Guardians of the galaxy</p>
-                            <button class="btn wtchbutn"><a href="/movies/guardians_of_galaxy.html">Watch
+                            <button class="butn watch-butn"><a href="/movies/guardians_of_galaxy.html">Watch
                                     movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh6">Watch Trailer</button>
+                            <button class="butn watch-button" data-target="#modalh6">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -856,9 +856,9 @@
                     <div class="parentdiv">
                         <div class="container">
                             <p class="mv-crd-name">Texas Chainsaw Massacre</p>
-                            <button class="btn wtchbutn"><a href="/movies/texas_chainsaw_massacre.html">Watch
+                            <button class="butn watch-butn"><a href="/movies/texas_chainsaw_massacre.html">Watch
                                     movie</a></button><br>
-                            <button class="btn wtch-btn" data-target="#modalh7">Watch Trailer</button>
+                            <button class="butn watch-button" data-target="#modalh7">Watch Trailer</button>
                             <br />
                         </div>
                     </div>
@@ -870,10 +870,9 @@
         </div>
     </div>
 
-
-
-
-
+    <a style="background-color: yellow;" href="#top" class="go-top active" data-go-top>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
 
     <footer class="footer">
 
@@ -966,6 +965,9 @@
         </div>
 
     </footer>
+
+
+
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -999,20 +1001,20 @@
         video-modal
      -->
     <script>
-        const btns = document.querySelectorAll("[data-target]");
+        const butns = document.querySelectorAll("[data-target]");
         const close_modals = document.querySelectorAll(".close-modal");
         const overlay = document.getElementById("overlay");
 
-        btns.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                document.querySelector(btn.dataset.target).classList.add("active");
+        butns.forEach((butn) => {
+            butn.addEventListener("click", () => {
+                document.querySelector(butn.dataset.target).classList.add("active");
                 overlay.classList.add("active");
             });
         });
 
-        close_modals.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                const modal = btn.closest(".modal");
+        close_modals.forEach((butn) => {
+            butn.addEventListener("click", () => {
+                const modal = butn.closest(".modal");
                 modal.classList.remove("active");
                 overlay.classList.remove("active");
             });
