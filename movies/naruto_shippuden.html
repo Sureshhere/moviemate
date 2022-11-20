@@ -1,0 +1,383 @@
+<!-- 
+    <iframe name="framez" id="framez" allowfullscreen="true" class="video-player" vertical-align: middle; width="1000" height="600" src="https://cinegrabber.com/v/qy04eael6r4wpkp"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Movie Mate - Best movie collections</title>
+ 
+ 
+     <!-- 
+     - favicon
+   -->
+     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+ 
+     <!-- 
+     - custom css link
+   -->
+     <link rel="stylesheet" href="./assets/css/style2.css">
+     <link rel="stylesheet" href="../assets/css/style.css">
+     <!-- 
+     - google font link
+   -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body id="top">
+ 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <!-- Preloader -->
+     <div id="preloader">
+         <div id="status">&nbsp;</div>
+     </div>
+ 
+ 
+ 
+     <!-- 
+     - #HEADER
+   -->
+ 
+     <header class="header" data-header>
+         <div class="container">
+ 
+             <div class="overlay" data-overlay></div>
+ 
+             <a href="./index.html" class="logo">
+                 <img src="./assets/images/cinema.png" alt="Moviemate logo">
+             </a>
+ 
+ 
+ 
+             <button class="menu-open-btn" data-menu-open-btn>
+                 <ion-icon name="reorder-two"></ion-icon>
+             </button>
+ 
+             <nav class="navbar" data-navbar>
+ 
+                 <div class="navbar-top">
+ 
+                     <a href="../index.html" class="logo">
+                         <img src="./assets/images/cinema.png" alt="Moviemate logo">
+                     </a>
+ 
+                     <button class="menu-close-btn" data-menu-close-btn>
+                         <ion-icon name="close-outline"></ion-icon>
+                     </button>
+ 
+                 </div>
+ 
+                 <ul class="navbar-list">
+ 
+                     <li>
+                         <a href="../index.html" class="navbar-link">Home</a>
+                     </li>
+ 
+                     <li>
+                         <a href="../movies.html" class="navbar-link">Movie</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Tv Show</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Web Series</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-link">Contact us</a>
+                     </li>
+ 
+                 </ul>
+ 
+                 <ul class="navbar-social-list">
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-twitter"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-facebook"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-pinterest"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-instagram"></ion-icon>
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="navbar-social-link">
+                             <ion-icon name="logo-youtube"></ion-icon>
+                         </a>
+                     </li>
+ 
+                 </ul>
+ 
+             </nav>
+ 
+         </div>
+     </header>
+ 
+     <section class="movie-detail">
+         <div class="container">
+ 
+             <figure class="movie-detail-banner">
+
+                 <img src="https://image.tmdb.org/t/p/original/csSsO9oXTIpOVxA3xXYbEzd6IKy.jpg" alt="Naruto Shippuden the Movie: The Will of Fire">
+ 
+                 <button class="play-btn">
+                     <a style="color: yellow;" href="#goto-movie"><ion-icon name="play-circle-outline"></ion-icon></a>
+                 </button>
+ 
+             </figure>
+ 
+             <div class="movie-detail-content">
+ 
+                 <p class="detail-subtitle"></p>
+ 
+                 <h1 class="h1 detail-title">
+                    Naruto Shippuden 
+                     <p class="detail-subtitle">The Movie : The Will of Fire</p>
+                 </h1>
+ 
+                 <div class="meta-wrapper">
+ 
+                     <div class="badge-wrapper">
+                         <div class="badge badge-fill">U</div>
+ 
+                         <div class="badge badge-outline">HD</div>
+                     </div>
+ 
+                     <div class="ganre-wrapper">
+                         <a href="#">Action,</a>
+                         <a href="#">Adventure,</a>
+                         <a href="#">Shounen,</a>
+                         <a href="#">Fantasy</a>
+                     </div>
+ 
+                     <div class="date-time">
+ 
+                         <div>
+                             <ion-icon name="calendar-outline"></ion-icon>
+ 
+                             <time datetime="2009">2009</time>
+                         </div>
+ 
+                         <div>
+                             <ion-icon name="time-outline"></ion-icon>
+ 
+                             <time datetime="PT115M">1hr 35mins</time>
+                         </div>
+ 
+                     </div>
+ 
+                 </div>
+ 
+                 <p class="storyline">
+                    With the other nations amassing troops on the borders of the Land of Fire & threatening invasion, the Feudal Lord of the Land of Fire orders Tsunade to capture the real culprit & prove Konoha's innocence, in the event of failure, the Land of Fire will destroy the village to preserve world peace.
+                 </p>
+ 
+ 
+                 <div class="details-actions">
+                     <input type="text" value="https://moviemateonline.vercel.app/movies/naruto_shippuden.html" id="myInput">
+                     
+                     <button value="https://moviemateonline.vercel.app/movies/naruto_shippuden.html" onclick="shareMovie" class="share">
+                         <ion-icon name="share-social"></ion-icon>
+                         <!-- <span>Copy Link</span> -->
+                     </button>
+                     <button class="copy-link" onclick="myFunction()"><span style="color: white;">Copy link</span></button>
+                     <button class="btn btn-primary">
+                         <ion-icon name="play"></ion-icon>
+ 
+                         <span><a style="color: white; font-size:15px;" href="#goto-movie">Watch Now</a></span>
+                     </button>
+ 
+                 </div>
+ 
+ 
+             </div>
+ 
+         </div>
+     </section>
+     <center> 
+         <div class="container" id="goto-movie">
+             <iframe allowfullscreen class="video-player" width="900" height="600" src="//membed.net/streaming.php?id=Nzg2MjI=&title=Naruto+Shippuuden+Movie+3%3A+The+Will+of+Fire+HD-720p&typesub=SUB&sub=&cover=Y292ZXIvbmFydXRvLXNoaXBwdXVkZW4tbW92aWUtMy10aGUtd2lsbC1vZi1maXJlLnBuZw=="
+                 frameborder="0"></iframe>
+             
+         </div>
+        </center>
+ 
+ 
+     <br><br><br>
+ 
+
+     <footer class="footer">
+ 
+       <div class="footer-top">
+           <div class="container">
+ 
+               <div class="footer-brand-wrapper">
+ 
+                   <a href="./index.html" class="logo">
+                       <img src="./assets/images/cinema.png" alt="Moviemate logo">
+                   </a>
+ 
+                   <ul class="footer-list">
+ 
+                       <li>
+                           <a href="../index.html" class="footer-link">Home</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Movie</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">TV Show</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Web Series</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="footer-link">Anime</a>
+                       </li>
+                       <li>
+                           <a href="#" class="footer-link">K-Drama</a>
+                       </li>
+ 
+                   </ul>
+ 
+               </div>
+ 
+               <div class="divider"></div>
+ 
+               <div class="quicklink-wrapper">
+ 
+                   <ul class="quicklink-list">
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Faq</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Help center</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Terms of use</a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="quicklink-link">Privacy</a>
+                       </li>
+ 
+                   </ul>
+ 
+                   <ul class="social-list">
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-facebook"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-twitter"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-pinterest"></ion-icon>
+                           </a>
+                       </li>
+ 
+                       <li>
+                           <a href="#" class="social-link">
+                               <ion-icon name="logo-linkedin"></ion-icon>
+                           </a>
+                       </li>
+ 
+                   </ul>
+ 
+               </div>
+ 
+           </div>
+       </div>
+ 
+       <div class="footer-bottom">
+           <div class="container">
+ 
+               <p class="copyright">
+                   &copy; 2022 <a href="#">Suresh Choudhary</a>. All Rights Reserved
+               </p>
+ 
+               
+ 
+           </div>
+       </div>
+ 
+   </footer>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     <script src="./assets/js/script.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <script src="./assets/js/script.js"></script>
+ 
+     <script>
+         function myFunction() {
+           // Get the text field
+           var copyText = document.getElementById("myInput");
+         
+           // Select the text field
+           copyText.select();
+           copyText.setSelectionRange(0, 99999); // For mobile devices
+         
+           // Copy the text inside the text field
+           navigator.clipboard.writeText(copyText.value);
+           
+           // Alert the copied text
+           alert("Copied the text: " + copyText.value);
+         }
+     </script>
+     
+ 
+     <!-- 
+     - ionicon link
+   -->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+ </body>
+ 
+ </html>
+
