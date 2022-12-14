@@ -4,12 +4,10 @@ Free online movie streaming website built using HTML5, CSS3, JAVASCRIPT and tool
 <h1>Available Movies</h1>
 <ul>
 <li><a href="https://moviemateonline.vercel.app/movies/the_nun.html">The Nun</a></li>
-<li>Thor Love & Thunder</li>
-<li>Doctor Strange in the Multiverse of Madness</li>
-<li>Interstellar</li>
-<li>Dune</li>
-<li>Texas chainsaw</li>
-<li>All of us are dead</li>
-<li>Guardians of the galaxy</li>
-<li>Spider man No way home</li>
+<li><a href="https://moviemateonline.vercel.app/movies/thor_love&thunder.html">Thor Love and Thunder</a></li>
+<li><a href="https://moviemateonline.vercel.app/movies/interstellar.html">Interstellar</a></li>
+<li><a href="https://moviemateonline.vercel.app/movies/dune.html">Dune</a></li>
+<li><a href="https://moviemateonline.vercel.app/movies/all_ofus_are_dead.html">All of us are dead</a></li>
+<li><a href="https://moviemateonline.vercel.app/movies/guardians_of_galaxy.html">guardians of galaxy</a></li>
+<li><a href="https://moviemateonline.vercel.app/movies/spiderman-no-way-home.html">Spider man No way home</a></li>
 </ul>
