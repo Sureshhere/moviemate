@@ -117,9 +117,9 @@ body.active {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #C147E9;
+    background-color: yellow;
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px #c147e9;
+    -webkit-box-shadow: inset 0 0 6px yellow;
 }
 /*-----------------------------------*\
  * #REUSED STYLE
